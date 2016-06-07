@@ -1,0 +1,166 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using GridList = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridList
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="grid-lists" class="grid-lists-section">
+	<label class="@Typography.Display2">10-4 Material Grid Lists</label>
+	<hr/>
+	<dl>
+		<dt class="@Typography.Headline">Grid Lists</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Grid lists are an alternative to standard list views. Grid lists are distinct from grids used for layouts and other visual presentations.</div>
+			<div class="@Typography.Caption frame-bottom">NOTE: A GRID LIST IS NOT THE SAME AS 12-COLUMN-GRID</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using GridList = TenFour.CommonContent.Web.Utilities.MaterialUiConst.GridList")</code></pre></div>
+
+			<!-- SIMPLE GRID LIST -->
+			<div class="@Typography.Body2D">Grid List</div>
+			<div class="@Typography.Caption">@Html.Raw("@GridList.Base, @GridList.Tile, @GridList.TileContent, @GridList.TileHeader, @GridList.TileTitle, @GridList.TileSubtitle, and @GridList.TileSecondAction")</div>
+			<section class="@GridList.Base @Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Grid.Grid">
+						<div class="@GridList.Tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+						<div class="mdtf-grid-list__tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+						<div class="mdtf-grid-list__tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="@Grid.Grid">
+						<div class="mdtf-grid-list__tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+						<div class="mdtf-grid-list__tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+						<div class="mdtf-grid-list__tile @Grid.Col4">
+							<div class="@GridList.TileContent">Content</div>
+							<div class="@GridList.TileHeader">
+								<div class="@GridList.TileTitle">Title</div>
+								<div class="@GridList.TileSubtitle">Subtitle</div>
+								<button class="@Button.FlatIcon @GridList.TileSecondAction">
+									<i class="@Icon.Material">@Icon.Type.StarBorder</i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- SIMPLE GRID LIST -->
+<section class=""mdtf-grid-list mdl-grid"">
+	<div class=""mdl-cell mdl-cell--12-col"">
+		<div class=""mdl-grid"">
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class=""mdl-grid"">
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+			<div class=""mdtf-grid-list__tile mdl-cell mdl-cell--4-col"">
+				<div class=""mdtf-grid-list__content"">Content</div>
+				<div class=""mdtf-grid-list__header"">
+					<div class=""mdtf-grid-list__content--title"">Title</div>
+					<div class=""mdtf-grid-list__content--subtitle"">Subtitle</div>
+					<button class=""mdl-button mdl-js-button mdl-button--icon action-secondary"">
+						<i class=""material-icons"">star_border</i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>")</code></pre>
+			</div>
+</section>
+		</dd>
+	</dl>
+</section>
+

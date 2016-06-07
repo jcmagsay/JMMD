@@ -1,0 +1,28 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Card = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Card
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Toolbar = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Toolbar
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="toolbars" class="toolbars-section">
+	<label class="@Typography.Display2">10-4 Material Toolbars</label>
+	<dl>
+		<dt class="@Typography.Headline">Toolbars</dt>
+		<dd>
+			<div class="@Typography.SubheadingD">Toolbars are a designated space in which actions can be taken for the application to which it belongs.</div>
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12 @Card.Base @Shadow.Dp8">
+					<div class="@Toolbar.Base @Shadow.Dp4">
+						<div class="@Toolbar.Menu">
+							<button class="@Button.FlatIcon"><i class="@Icon.Material">@Icon.Type.Menu</i>
+							</button>
+						</div>
+						<div class="@Toolbar.Content"></div>
+					</div>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

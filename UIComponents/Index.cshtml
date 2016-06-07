@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayoutMaterialNoNav.cshtml";
+	ViewBag.Title = "Material Style Guide";
+}
+
+@section CssDependencies {
+	<link href="~/Content/CSS/prism.css" rel="stylesheet" />
+	<link href="~/Content/CSS/UIComponents/UIComponentLayout.css" rel="stylesheet"/>
+}
+
+@section HeaderSection {
+	@Html.Partial("Partials/_ApplicationHeader")
+}
+
+@section DrawerSection {
+	@* Side Bar section *@
+	@Html.Partial("Partials/_ApplicationDrawer")
+}
+
+<div class="ui-component-layout">
+
+	@Html.Partial("Partials/Components/_Hybrid")
+	@Html.Partial("Partials/Components/_Buttons")
+	@Html.Partial("Partials/Components/_Cards")
+	@Html.Partial("Partials/Components/_Chips")
+	@Html.Partial("Partials/Components/_DataTables")
+	@Html.Partial("Partials/Components/_Dialogs")
+	@Html.Partial("Partials/Components/_Dividers")
+	@Html.Partial("Partials/Components/_GridLists")
+	@Html.Partial("Partials/Components/_ListControls")
+	@Html.Partial("Partials/Components/_Lists")
+	@Html.Partial("Partials/Components/_Menus")
+
+	<!-- TODO BEGIN -- LAST ON PRIORITY LIST -->
+	@Html.Partial("Partials/Components/_Pickers")
+	@Html.Partial("Partials/Components/_Progress")
+	<!-- TODO END -- LAST ON PRIORITY LIST -->
+
+	@Html.Partial("Partials/Components/_SelectionControls")
+	@Html.Partial("Partials/Components/_Sliders")
+	@Html.Partial("Partials/Components/_Snackbars")
+
+	@Html.Partial("Partials/Components/_Steppers")
+	@Html.Partial("Partials/Components/_Subheaders")
+
+	@Html.Partial("Partials/Components/_Tabs")
+	@Html.Partial("Partials/Components/_Textfields")
+	@Html.Partial("Partials/Components/_Toolbars")
+	@Html.Partial("Partials/Components/_Tooltips")
+	@Html.Partial("Partials/Components/_Typography")
+	
+
+</div>
+
+@section ScriptDependencies {
+	<script src="~/Content/js/prism.js"></script>
+}
+
+@section FooterScripts {
+	<script type="text/javascript">
+		MdtfFabDropdown.upgrade();
+	</script>
+}

@@ -1,0 +1,34 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Snackbar = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Snackbar
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="snackbars" class="snackbars-section">
+	<label class="@Typography.Display2">10-4 Material Snackbars</label>
+	<dl>
+		<dt class="@Typography.Headline">Snackbars</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Snackbars provide lightweight feedback about an operation by showing a brief message at the bottom of the screen. Snackbars can contain an action.</div>
+
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Snackbar.Small">
+						<div class="@Snackbar.Message">Something went wrong. Request timed out.</div>
+					</div>
+				</div>
+				<div class="@Grid.Col12">
+					<div class="@Snackbar.Medium @Snackbar.HasAction">
+						<div class="@Snackbar.Message">Something went wrong. Request timed out.</div>
+						<button class="@Snackbar.Action @Button.FlatColorAccent">retry</button>
+					</div>
+				</div>
+				<div class="@Grid.Col12">
+					<div class="@Snackbar.Large @Snackbar.HasAction">
+						<div class="@Snackbar.Message">Something went wrong. Request timed out.</div>
+						<button class="@Snackbar.Action @Button.FlatColorAccent">retry</button>
+					</div>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

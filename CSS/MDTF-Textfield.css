@@ -1,0 +1,57 @@
+﻿.mdl-textfield {
+	padding: 0;
+}
+.mdl-textfield.is-focused,
+.mdl-textfield.is-dirty {
+	padding: 10px 0;
+}
+
+	.mdl-textfield > input.mdl-textfield__input {
+		padding: 8px 10px;
+	}
+		.mdl-textfield.is-focused > .mdl-textfield__input,
+		.mdl-textfield.is-dirty > .mdl-textfield__input {
+			font-weight: 400;
+		}
+		.mdl-textfield--floating-label.is-focused .mdl-textfield__input,
+		.mdl-textfield--floating-label.is-dirty .mdl-textfield__input {
+			color: rgba(0,0,0,.5);
+			font-size: 16px;
+			padding: 6px 10px 0;
+		}
+	.mdl-textfield__label {
+		color: rgba(0, 0, 0, .87);
+		font-weight: 400;
+		margin-bottom: 0;
+		top: 10px;
+	}
+	.mdl-textfield.is-focused label::after {
+		background-color: rgba(1, 87, 155, 1);
+		bottom: 10px;
+	}
+	.mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+	.mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+		color: rgba(1, 87, 155, 1);
+		font-size: 11px;
+		top: 0;
+	}
+	.mdl-textfield--expandable .mdl-textfield__expandable-holder > label::after {
+		bottom: 2px;
+	}
+		.mdl-textfield > label > i {
+			font-size: 16px;
+			vertical-align: -2px;
+		}
+		.mdl-textfield.is-focused > label > i,
+		.mdl-textfield.is-dirty > label > i {
+			color: rgba(1, 87, 155, 1);
+			font-size: 12px;
+		}
+
+
+
+
+	
+
+
+

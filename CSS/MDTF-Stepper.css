@@ -1,0 +1,60 @@
+﻿.mdtf-stepper {
+	cursor: pointer;
+	display: flex;
+	font-size: 14px;
+}
+
+.mdtf-stepper.horizontal {
+	color: rgba(0, 0, 0, .26);
+	font-weight: 400;
+	height: 72px;
+}
+
+.mdtf-stepper.vertical {
+	
+}
+.mdtf-stepper__step.is-active {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 700;
+}
+	.mdtf-stepper__step {
+		width: calc(85% / 3);
+		display: flex;
+		padding: 24px 0 24px 8px;
+	}
+		.mdtf-stepper__step:first-of-type {
+			padding-left: 24px;
+		}
+		.mdtf-stepper__step:last-of-type {
+			padding-right: 24px;
+			width: 15%;
+		}
+		.mdtf-stepper__step:hover {
+			background-color: rgba(0, 0, 0, .06);
+			display: flex;
+		}
+	
+		.mdtf-stepper__step .mdtf-stepper__number {
+			background-color: rgba(158, 158, 158, 1);
+			border-radius: 100%;
+			color: rgba(255, 255, 255, .87);
+			height: 24px;
+			padding: 3px;
+			text-align: center;
+			width: 24px;
+
+		}
+			.mdtf-stepper__step.is-active .mdtf-stepper__number {
+				background-color: rgba(3, 169, 244, 1);
+			}
+		
+			.mdtf-stepper .mdtf-stepper__text {
+				margin: 2px 8px;
+			}
+
+			.mdtf-stepper .mdtf-stepper__connector {
+				background-color: rgba(189, 189, 189, 1);
+				height: 1px;
+				margin: 10px 0;
+				min-width: 150px;
+			}

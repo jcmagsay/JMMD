@@ -1,0 +1,161 @@
+﻿<section id="menus" class="menus-section">
+	<label class="mdtf-typography__display-2">10-4 Material Menus</label>
+	<dl>
+		<dt class="mdtf-typography__display-title">Menus</dt>
+		<dd>
+			<span class="mdtf-typography__display-body-1--desktop">Menus allow users to take an action by selecting from a list of choices revealed upon opening a temporary, new sheet of material.</span>
+			<section class="mdl-grid">
+				<!-- LOWER LEFT -->
+				<section class="mdl-cell mdl-cell--6-col">
+					<span class="mdtf-typography__display-body-2--desktop">Lower Left</span>
+					<!-- Left aligned menu below button -->
+					<div class="mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							<button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+								<i class="material-icons">more_vert</i>
+							</button>
+							Sample Title
+						</div>
+						<div class="mdl-card__supporting-text">Click the menu button to view demo of a dropdown menu</div>
+						<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+						    for="demo-menu-lower-left">
+							<li class="mdl-menu__item">Some Action</li>
+							<li class="mdl-menu__item">Another Action</li>
+							<li disabled class="mdl-menu__item">Disabled Action</li>
+							<li class="mdl-menu__item">Yet Another Action</li>
+						</ul>
+					</div>
+				</section>
+				<!-- LOWER RIGHT -->
+				<section class="mdl-cell mdl-cell--6-col">
+					<span class="mdtf-typography__display-body-2--desktop">Lower Right</span>
+					<!-- Left aligned menu below button -->
+					<div class="mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">
+							Sample Title
+						</div>
+						<div class="mdl-card__supporting-text">Click the menu button to view demo of a dropdown menu</div>
+						<div class="mdl-card__menu">
+							<button id="demo-menu-lower-right"
+							        class="mdl-button mdl-js-button mdl-button--icon">
+								<i class="material-icons">more_vert</i>
+							</button>
+							<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+							    for="demo-menu-lower-right">
+								<li class="mdl-menu__item">Some Action</li>
+								<li class="mdl-menu__item">Another Action</li>
+								<li disabled class="mdl-menu__item">Disabled Action</li>
+								<li class="mdl-menu__item">Yet Another Action</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+			
+			<!-- CODE SAMPLE SECTION-->
+			<section class="mdl-grid">
+				<div class="mdl-cell mdl-cell--12-col">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Lower Left - Left aligned menu below button -->
+<button id=""demo-menu-lower-left"" class=""mdl-button mdl-js-button mdl-button--icon"">
+	<i class=""material-icons"">more_vert</i>
+</button>
+<ul class=""mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"" for=""demo-menu-lower-left"">
+	<li class=""mdl-menu__item"">Some Action</li>
+	<li class=""mdl-menu__item"">Another Action</li>
+	<li disabled class=""mdl-menu__item"">Disabled Action</li>
+	<li class=""mdl-menu__item"">Yet Another Action</li>
+</ul>
+
+<!-- Lower Right - Right aligned menu below button -->
+<button id=""demo-menu-lower-right"" class=""mdl-button mdl-js-button mdl-button--icon"">
+	<i class=""material-icons"">more_vert</i>
+</button>
+<ul class=""mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"" for=""demo-menu-lower-right"">
+	<li class=""mdl-menu__item"">Some Action</li>
+	<li class=""mdl-menu__item"">Another Action</li>
+	<li disabled class=""mdl-menu__item"">Disabled Action</li>
+	<li class=""mdl-menu__item"">Yet Another Action</li>
+</ul>")
+</code></pre>
+				</div>
+			</section>
+
+			<section class="mdl-grid">
+				<!-- UPPER LEFT -->
+				<section class="mdl-cell mdl-cell--6-col">
+					<span class="mdtf-typography__display-body-2--desktop">Upper Left</span>
+					<!-- Left aligned menu below button -->
+					<div class="mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">Sample Title</div>
+						<div class="mdl-card__supporting-text">Click the menu button to view demo of a dropdown menu</div>
+						<div class="mdl-card__actions">
+							<!-- Left aligned menu on top of button -->
+							<button id="demo-menu-top-left" class="mdl-button mdl-js-button mdl-button--icon">
+								<i class="material-icons">more_vert</i>
+							</button>
+
+							<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+							    for="demo-menu-top-left">
+								<li class="mdl-menu__item">Some Action</li>
+								<li class="mdl-menu__item">Another Action</li>
+								<li disabled class="mdl-menu__item">Disabled Action</li>
+								<li class="mdl-menu__item">Yet Another Action</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- UPPER RIGHT -->
+				<section class="mdl-cell mdl-cell--6-col">
+					<span class="mdtf-typography__display-body-2--desktop">Upper Right</span>
+					<!-- Left aligned menu below button -->
+					<div class="mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title">Sample Title</div>
+						<div class="mdl-card__supporting-text">Click the menu button to view demo of a dropdown menu</div>
+						<div class="mdl-card__actions">
+							<!-- Right aligned menu on top of button -->
+							<button id="demo-menu-top-right" class="mdl-button mdl-js-button mdl-button--icon pull-right">
+								<i class="material-icons">more_vert</i>
+							</button>
+
+							<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+							    for="demo-menu-top-right">
+								<li class="mdl-menu__item">Some Action</li>
+								<li class="mdl-menu__item">Another Action</li>
+								<li disabled class="mdl-menu__item">Disabled Action</li>
+								<li class="mdl-menu__item">Yet Another Action</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="mdl-grid">
+				<div class="mdl-cell mdl-cell--12-col">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Upper Left - Left aligned menu on top of button  -->
+<button id=""demo-menu-top-left"" class=""mdl-button mdl-js-button mdl-button--icon"">
+	<i class=""material-icons"">more_vert</i>
+</button>
+<ul class=""mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"" for=""demo-menu-top-left"">
+	<li class=""mdl-menu__item"">Some Action</li>
+	<li class=""mdl-menu__item"">Another Action</li>
+	<li disabled class=""mdl-menu__item"">Disabled Action</li>
+	<li class=""mdl-menu__item"">Yet Another Action</li>
+</ul>
+
+<!-- Upper Right - Right aligned menu on top of button  -->
+<button id=""demo-menu-top-right"" class=""mdl-button mdl-js-button mdl-button--icon"">
+	<i class=""material-icons"">more_vert</i>
+</button>
+<ul class=""mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"" for=""demo-menu-top-right"">
+	<li class=""mdl-menu__item"">Some Action</li>
+	<li class=""mdl-menu__item"">Another Action</li>
+	<li disabled class=""mdl-menu__item"">Disabled Action</li>
+	<li class=""mdl-menu__item"">Yet Another Action</li>
+</ul>")
+</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

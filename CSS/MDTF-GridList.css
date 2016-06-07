@@ -1,0 +1,24 @@
+﻿.mdtf-grid-list {
+	background-color: rgba(0, 0, 0,.1);
+}
+	.mdtf-grid-list .mdtf-grid-list__tile {
+		color: rgba(255, 255, 255, .85);
+		min-height: 250px;
+	}
+		.mdtf-grid-list__tile .mdtf-grid-list__tile-content {
+			background-color: rgba(0, 0, 0, 1);
+			min-height: 182px;
+			padding: 16px;
+		}
+		.mdtf-grid-list__tile .mdtf-grid-list__tile-header {
+			background-color: rgba(0, 0, 0, .5);
+			min-height: 68px;
+			padding: 16px;
+			position: relative;
+		}
+		.mdtf-grid-list__tile .action-secondary {
+			display: inline-block;
+			position: absolute;
+			top: 20px;
+			right: 16px;
+		}

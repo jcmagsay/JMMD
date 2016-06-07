@@ -1,0 +1,38 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Card = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Card
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Tabs = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Tabs
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="tabs" class="tabs-section">
+	<label class="@Typography.Display2">10-4 Material Tabs</label>
+	<dl>
+		<dt class="@Typography.Headline">Tabs</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Tabs make it easy to explore and switch between different views or functional aspects of an app or to browse categorized data sets.</div>
+			<section @Grid.Grid>
+				<div @Grid.Col12>
+					<div class="@Tabs.Base">
+						<div class="@Tabs.Bar">
+							<a href="#starks-panel" class="@Tabs.Tab is-active">Marketplace</a>
+							<a href="#lannisters-panel" class="@Tabs.Tab">Freight Portal</a>
+							<a href="#targaryens-panel" class="@Tabs.Tab">Settings</a>
+						</div>
+
+						<div class="@Tabs.Panel is-active" id="starks-panel">
+							<div class="@Typography.Display1 mdl-typography--text-center">Marketplace Content</div>
+						</div>
+						<div class="@Tabs.Panel" id="lannisters-panel">
+							<div class="@Typography.Display1 mdl-typography--text-center">Freight Portal Content</div>
+						</div>
+						<div class="@Tabs.Panel" id="targaryens-panel">
+							<div class="@Typography.Display1 mdl-typography--text-center">Settings Content</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

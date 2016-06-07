@@ -1,0 +1,161 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Dialog = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Dialog
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Selection = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Selection
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="dialogs" class="dialogs-section">
+	<label class="@Typography.Display2">10-4 Material Dialogs</label>
+	<dl>
+		<dt class="@Typography.Title">Dialogs</dt>
+		<dd>
+			<div class="@Typography.Body1D frame-bottom">Dialogs contain text and UI controls focused on a specific task. They inform users about critical information, require users to make decisions, or involve multiple tasks.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Dialog = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Dialog")</code></pre></div>
+			<!-- DIALOGS (GROUP 1) -->
+			<div class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Body2D">Basic Dialog (Long)</div>
+					<div class="@Typography.Caption">@Html.Raw("@Dialog.Base (in a 12 Column Cell)")</div>
+					<!-- Basic Dialog (Long)-->
+					<div class="@Dialog.Base @Shadow.Dp16">
+						<section class="@Dialog.Content">
+							<div class="@Dialog.ContentTitle">Use 10-4 Ping?</div>
+							<div class="@Dialog.ContentSupportingText">Let 10-4 use your location to help track your trucks. There will be a small surcharge for each ping to retrieve your location and track accurately.</div>
+						</section>
+						<section class="@Dialog.Actions">
+							<div class="@Button.BtnGroup">
+								<button class="@Button.FlatColorPrimary">Disagree</button>
+								<button class="@Button.FlatColorPrimary">Agree</button>
+							</div>
+						</section>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- BASIC DIALOG (LONG)-->
+<div class=""mdl-cell mdl-cell--12-col"">
+	<div class=""mdtf-dialog mdl-shadow--16dp"">
+		<section class="" mdtf-dialog__content"">
+			<div class=""mdtf-dialog__content--title"">Use 10-4 Ping?</div>
+			<div class=""mdtf-dialog__content--supporting-text"">Let 10-4 use your location to help track your trucks. There will be a small surcharge for each ping to retrieve your location and track accurately.</div>
+		</section>
+		<section class=""mdtf-dialog__actions"">
+			<div class=""mdtf-btn-group"">
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Disagree</button>
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Agree</button>
+			</div>
+		</section>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- DIALOGS (GROUP 2) -->
+			<div class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Basic Dialog (Short)</div>
+					<div class="@Typography.Caption">@Html.Raw("@Dialog.Base (in a 6 Column Cell)")</div>
+					<!-- Basic Dialog (Short) -->
+					<div class="@Dialog.Base @Shadow.Dp16">
+						<section class="@Dialog.Content">
+							<div class="@Dialog.ContentTitle">Use 10-4 Ping?</div>
+							<div class="@Dialog.ContentSupportingText">Let 10-4 use your location to help track your trucks. There will be a small surcharge for each ping to retrieve your location and track accurately.</div>
+						</section>
+						<section class="@Dialog.Actions">
+							<div class="@Button.BtnGroup">
+								<button class="@Button.FlatColorPrimary">Disagree</button>
+								<button class="@Button.FlatColorPrimary">Agree</button>
+							</div>
+						</section>
+					</div>
+				</div>
+
+				<!-- Dialog with Radio Buttons-->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Dialog with Radio Buttons</div>
+					<div class="@Typography.Caption">@Html.Raw("@Dialog.Confirm (in a 6 Column Cell)")</div>
+					<div class="@Dialog.Confirm @Shadow.Dp16">
+						<section class="@Dialog.Content">
+							<div class="@Dialog.ContentTitle">Set your tracking method</div>
+							<div class="@Dialog.ContentSupportingText">
+								<label class="@Selection.Radio" for="option-1">
+									<input type="radio" id="option-1" class="@Selection.RadioInput" name="options" value="1" checked>
+									<span class="@Selection.RadioLabel">Manual</span>
+								</label>
+								<label class="@Selection.Radio" for="option-2">
+									<input type="radio" id="option-2" class="@Selection.RadioInput" name="options" value="2" checked>
+									<span class="@Selection.RadioLabel">10-4 Ping</span>
+								</label>
+								<label class="@Selection.Radio" for="option-3">
+									<input type="radio" id="option-3" class="@Selection.RadioInput" name="options" value="3" checked>
+									<span class="@Selection.RadioLabel">API</span>
+								</label>
+							</div>
+						</section>
+						<section class="@Dialog.Actions">
+							<div class="@Button.BtnGroup">
+								<button class="@Button.FlatColorPrimary">Cancel</button>
+								<button class="@Button.FlatColorPrimary">Ok</button>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="mdl-cell mdl-cell--12-col">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- BASIC DIALOG (SHORT) -->
+<div class=""@Grid.Col6"">
+	<div class=""mdtf-dialog mdl-shadow--16dp"">
+		<section class="" mdtf-dialog__content"">
+			<div class=""mdtf-dialog__content--title"">Use 10-4 Ping?</div>
+			<div class=""mdtf-dialog__content--supporting-text"">Let 10-4 use your location to help track your trucks. There will be a small surcharge for each ping to retrieve your location and track accurately.</div>
+		</section>
+		<section class=""mdtf-dialog__actions"">
+			<div class=""mdtf-btn-group"">
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Disagree</button>
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Agree</button>
+			</div>
+		</section>
+	</div>
+</div>
+
+<!-- Dialog with Radio Buttons-->
+<div class=""@Grid.Col6"">
+	<div class=""mdtf-dialog confirm mdl-shadow--16dp"">
+		<section class="" mdtf-dialog__content"">
+			<div class=""mdtf-dialog__content--title"">Set your tracking method</div>
+			<div class=""mdtf-dialog__content--supporting-text"">
+				<label class=""mdl-radio mdl-js-radio mdl-js-ripple-effect"" for=""option-1"">
+					<input type=""radio"" id=""option-1"" class=""mdl-radio__button"" name=""options"" value=""1"" checked>
+					<span class=""mdl-radio__label"">Manual</span>
+				</label>
+				<label class=""mdl-radio mdl-js-radio mdl-js-ripple-effect"" for=""option-2"">
+					<input type=""radio"" id=""option-2"" class=""mdl-radio__button"" name=""options"" value=""2"" checked>
+					<span class=""mdl-radio__label"">10-4 Ping</span>
+				</label>
+				<label class=""mdl-radio mdl-js-radio mdl-js-ripple-effect"" for=""option-3"">
+					<input type=""radio"" id=""option-3"" class=""mdl-radio__button"" name=""options"" value=""3"" checked>
+					<span class=""mdl-radio__label"">API</span>
+				</label>
+			</div>
+		</section>
+		<section class=""mdtf-dialog__actions"">
+			<div class=""mdtf-btn-group"">
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Cancel</button>
+				<button class=""mdl-button mdl-js-button mdl-button--primary"">Ok</button>
+			</div>
+		</section>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

@@ -1,0 +1,554 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Menu = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Menu
+@using Selection = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Selection
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="buttons" class="buttons-section">
+	<label class="@Typography.Display2">10-4 Material Buttons</label>
+	<hr/>
+	<dl>
+		<!-- FLOATING ACTION BUTTONS -- BEGIN -->
+		<dt class="@Typography.Headline">Floating Action Buttons (FABs)</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">A circular material button that lifts and displays an ink reaction on press.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Button = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Button")</code></pre></div>
+			<!-- FLOATING ACTION BUTTONS (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Colored FAB button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FabColor")</div>
+					<!-- Colored FAB button -->
+					<button class="@Button.FabColor">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Colored FAB button with ripple</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FabColorRipple")</div>
+					<!-- Colored FAB button with ripple -->
+					<button class="@Button.FabColorRipple">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">FAB button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Fab")</div>
+					<!-- FAB button -->
+					<button class="@Button.Fab">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">FAB button with ripple</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FabRipple")</div>
+					<!-- FAB button with ripple -->
+					<button class="@Button.FabRipple">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Colored FAB button -->
+<button class=""mdl-button mdl-js-button mdl-button--fab mdl-button--colored"">
+	<i class=""material-icons"">add</i>
+</button>
+
+<!-- Colored FAB button with ripple -->
+<button class=""mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"">
+	<i class=""material-icons"">add</i>
+</button>
+
+<!-- FAB button -->
+<button class=""mdl-button mdl-js-button mdl-button--fab"">
+	<i class=""material-icons"">add</i>
+</button>
+
+<!-- FAB button with ripple -->
+<button class=""mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"">
+	<i class=""material-icons"">add</i>
+</button>")
+</code></pre>
+				</div>
+			</section>
+
+			<!-- FLOATING ACTION BUTTONS (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Disabled FAB button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Fab") plus 'disabled' attribute</div>
+					<!-- Disabled FAB button -->
+					<button class="@Button.Fab" disabled>
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Mini FAB button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FabMini")</div>
+					<!-- Mini FAB button -->
+					<button class="@Button.FabMini">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Colored mini FAB button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FabMiniColor")</div>
+					<!-- Colored mini FAB button -->
+					<button class="@Button.FabMiniColor">
+						<i class="@Icon.Material">@Icon.Type.Add</i>
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Disabled FAB button -->
+<button class=""mdl-button mdl-js-button mdl-button--fab"" disabled>
+	<i class=""material-icons"">add</i>
+</button>
+
+<!-- Mini FAB button -->
+<button class=""mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab"">
+	<i class=""material-icons"">add</i>
+</button>
+
+<!-- Colored mini FAB button -->
+<button class=""mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored"">
+	<i class=""material-icons"">add</i>
+</button>")
+</code></pre>
+				</div>
+			</section>
+
+		</dd>
+		<!-- FLOATING ACTION BUTTONS -- END -->
+
+		<!-- RAISED BUTTONS -- BEGIN -->
+		<dt class="@Typography.Headline">Raised Buttons</dt>
+		<dd>
+			<span class="@Typography.SubheadingD">A typically rectangular material button that lifts and displays ink reactions on press.</span>
+			<!-- RAISED BUTTONS (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Raised button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Raised")</div>
+					<!-- Raised button -->
+					<button class="@Button.Raised">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Raised button with ripple</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.RaisedRipple")</div>
+					<!-- Raised button with ripple -->
+					<button class="@Button.RaisedRipple">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Raised 'disabled' button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Raised") plus 'disabled' attribute</div>
+					<!-- Raised disabled button-->
+					<button class="@Button.Raised" disabled>
+						Button
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Raised button -->
+<button class=""mdl-button mdl-js-button mdl-button--raised"">Button</button>
+
+<!-- Raised button with ripple -->
+<button class=""mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"">Button</button>
+
+<!-- Raised disabled button-->
+<button class=""mdl-button mdl-js-button mdl-button--raised"" disabled>Button</button>")
+</code></pre>
+				</div>
+			</section>
+
+			<!-- RAISED BUTTONS (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Colored raised button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.RaisedColorPrimary")</div>
+					<!-- Colored raised button -->
+					<button class="@Button.RaisedColorPrimary">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Accent-colored raised button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.RaisedColorAccent")</div>
+					<!-- Accent-colored raised button -->
+					<button class="@Button.RaisedColorAccent">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Accent-colored raised button with ripple</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.RaisedColorAccentRipple")</div>
+					<!-- Accent-colored raised button with ripple -->
+					<button class="@Button.RaisedColorAccentRipple">
+						Button
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Colored raised button -->
+<button class=""mdl-button mdl-js-button mdl-button--raised mdl-button--colored"">Button</button>
+
+<!-- Accent-colored raised button -->
+<button class=""mdl-button mdl-js-button mdl-button--raised mdl-button--accent"">Button</button>
+
+<!-- Accent-colored raised button with ripple -->
+<button class=""mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"">Button</button>")
+</code></pre>
+				</div>
+			</section>
+		</dd>
+		<!-- RAISED BUTTONS -- END -->
+
+		<!-- FLAT BUTTONS -- BEGIN -->
+		<dt class="@Typography.Headline">Flat Buttons</dt>
+		<dd>
+			<span class="@Typography.SubheadingD">A button made of ink that displays ink reactions on press but does not lift.</span>
+			<!-- FLAT BUTTONS (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Flat button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Flat")</div>
+					<!-- Flat button -->
+					<button class="@Button.Flat">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Flat button with ripple</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FlatRipple")</div>
+					<!-- Flat button with ripple -->
+					<button class="@Button.FlatRipple">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col4">
+					<div class="@Typography.Body2D">Disabled flat button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.Flat") plus 'disabled' attribute</div>
+					<!-- Disabled flat button -->
+					<button class="@Button.Flat" disabled>
+						Button
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Flat button -->
+<button class=""mdl-button mdl-js-button"">Button</button>
+
+<!-- Flat button with ripple -->
+<button class=""mdl-button mdl-js-button mdl-js-ripple-effect"">Button</button>
+
+<!-- Disabled flat button -->
+<button class=""mdl-button mdl-js-button"" disabled>Button</button>")
+</code></pre>
+				</div>
+			</section>
+
+
+			<!-- FLAT BUTTONS (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Primary-colored flat button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FlatColorPrimary")</div>
+					<!-- Primary-colored flat button -->
+					<button class="@Button.FlatColorPrimary">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Accent-colored flat button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FlatColorAccent")</div>
+					<!-- Accent-colored flat button -->
+					<button class="@Button.FlatColorAccent">
+						Button
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Icon button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FlatIcon")</div>
+					<!-- Icon button -->
+					<button class="@Button.FlatIcon">
+						<i class="@Icon.Material">@Icon.Type.Mood</i>
+					</button>
+				</div>
+				<div class="@Grid.Cell @Grid.Col3">
+					<div class="@Typography.Body2D">Colored icon button</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.FlatIconColor")</div>
+					<!-- Colored icon button -->
+					<button class="@Button.FlatIconColor">
+						<i class="@Icon.Material">@Icon.Type.Mood</i>
+					</button>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Primary-colored flat button -->
+<button class=""mdl-button mdl-js-button mdl-button--primary"">Button</button>
+
+<!-- Accent-colored flat button -->
+<button class=""mdl-button mdl-js-button mdl-button--accent"">Button</button>
+
+<!-- Icon button -->
+<button class=""mdl-button mdl-js-button mdl-button--icon"">
+	<i class=""material-icons"">mood</i>
+</button>
+
+<!-- Colored icon button -->
+<button class=""mdl-button mdl-js-button mdl-button--icon mdl-button--colored"">
+	<i class=""material-icons"">mood</i>
+</button>")
+</code></pre>
+				</div>
+			</section>
+		</dd>
+		<!-- FLAT BUTTONS -- END -->
+
+		<!-- TOGGLE BUTTONS -- BEGIN -->
+		<dt class="@Typography.Headline">Toggle Buttons</dt>
+		<dd>
+			<span class="@Typography.SubheadingD">Toggle buttons may be used to group related options. Arrange layout and spacing to convey that certain toggle buttons are part of a group.</span>
+			
+			<!-- TOGGLE BUTTONS CONTEXT AND USAGE -->
+			<section class="@Grid.Grid @Typography.Body2D frame-top">
+				<div class="@Grid.Cell @Grid.Col6">
+					Toggle button requirements:
+					<ul class="@Typography.Caption">
+						<li>Have at least three toggle buttons in a group</li>
+						<li>Label buttons with text, an icon, or both</li>
+					</ul>
+				</div>
+				<div class="@Grid.Cell @Grid.Col6">
+					The following combinations are recommended:
+					<ul class="@Typography.Caption">
+						<li>Multiple and unselected</li>
+						<li>Exclusive and unselected</li>
+						<li>Exclusive only</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- TOGGLE BUTTON (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">Exclusive selection button</div>
+					<div class="@Typography.Body1D">ONLY USED FOR SINGLE SELECTIONS</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.ToggleBtnGroupExclusive") plus 'is-updated'</div>
+					<!-- Exclusive selection button -->
+					<div class="@Button.ToggleBtnGroupExclusive is-updated">
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat is-active">Button</button>
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat">Button</button>
+					</div>
+				</div>
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">Multiple selection button</div>
+					<div class="@Typography.Body1D">USED FOR MULTIPLE SELECTIONS</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.ToggleBtnGroupMultiple") plus 'is-updated'</div>
+					<!-- Multiple selection button -->
+					<div class="@Button.ToggleBtnGroupMultiple is-updated">
+						<button class="@Button.Flat is-active">Button</button>
+						<button class="@Button.Flat is-active">Button</button>
+						<button class="@Button.Flat is-active">Button</button>
+						<button class="@Button.Flat">Button</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Exclusive selection button -->
+<div class=""mdtf-button__toggle-btn exclusive is-updated"">
+	<button class=""mdl-button mdl-js-button"">Button</button>
+	<button class=""mdl-button mdl-js-button is-active"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+</div>
+
+<!-- Multiple selection button -->
+<div class=""mdtf-button__toggle-btn multiple is-updated"">
+	<button class=""mdl-button mdl-js-button is-active"">Button</button>
+	<button class=""mdl-button mdl-js-button is-active"">Button</button>
+	<button class=""mdl-button mdl-js-button is-active"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- TOGGLE BUTTON (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">No options are selected</div>
+					<div class="@Typography.Body1D">USED FOR MULTIPLE SELECTIONS</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.ToggleBtnGroupMultiple")</div>
+					<!-- No options are selected -->
+					<div class="@Button.ToggleBtnGroupMultiple">
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat">Button</button>
+					</div>
+				</div>
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">One option is selected</div>
+					<div class="@Typography.Body1D">USED FOR MULTIPLE SELECTIONS</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.ToggleBtnGroupMultiple") plus 'is-updated'</div>
+					<!-- One option is selected -->
+					<div class="@Button.ToggleBtnGroupMultiple is-updated">
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat is-active">Button</button>
+						<button class="@Button.Flat">Button</button>
+						<button class="@Button.Flat">Button</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- No options are selected -->
+<div class=""mdtf-button__toggle-btn multiple"">
+	<button class=""mdl-button mdl-js-button"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+	<button class=""mdl-button mdl-js-button"">Button</button>
+</div>
+
+<!-- One option is selected -->
+<div class="" mdtf-button__toggle-btn multiple is-updated"">
+	<button class="" mdl-button mdl-js-button"">Button</button>
+	<button class="" mdl-button mdl-js-button is-active"">Button</button>
+	<button class="" mdl-button mdl-js-button"">Button</button>
+	<button class="" mdl-button mdl-js-button"">Button</button>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+		<!-- TOGGLE BUTTONS -- END -->
+
+		<!-- DROPDOWN BUTTONS -- BEGIN -->
+		<dt class="@Typography.Headline">Dropdown Buttons</dt>
+		<dd>
+			<span class="@Typography.SubheadingD">Toggle buttons may be used to group related options. Arrange layout and spacing to convey that certain toggle buttons are part of a group.</span>
+			
+			<!-- DROPDOWN BUTTONS (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">TenFour Material Dropdown</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.DropdownBtnMenu")</div>
+					<!-- TenFour Material Dropdown -->
+					<div class="@Button.DropdownBtnMenu">
+						<button id="select-btn" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+						<ul for="select-btn" class="@Menu.BottomRight">
+							<li class="@Menu.Item default-item" disabled>Select...</li>
+							<li class="@Menu.Item">Option 1</li>
+							<li class="@Menu.Item">Option 2</li>
+							<li class="@Menu.Item">Option 3</li>
+							<li class="@Menu.Item">Option 4</li>
+						</ul>
+					</div>
+				</div>
+				<div class="@Grid.Cell @Grid.Col6">
+					<div class="@Typography.Body2D">TenFour Material Dropdown w/ Checkboxes</div>
+					<div class="@Typography.Caption">@Html.Raw("@Button.DropdownBtnMultiselect")</div>
+					<!-- TenFour Material Dropdown w/ Checkboxes -->
+					<div class="@Button.DropdownBtnMultiselect">
+						<button id="check-select-btn" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+						<ul for="check-select-btn" class="@Menu.BottomRight">
+							<li class="@Menu.Item default-item" disabled>Select...</li>
+							<li class="@Menu.Item">
+								<label class="@Selection.Checkbox" for="checkbox-1">
+									<input type="checkbox" id="checkbox-1" class="@Selection.CheckboxInput">
+									<span class="@Selection.CheckboxLabel">Option 1</span>
+								</label>
+							</li>
+							<li class="@Menu.Item">
+								<label class="@Selection.Checkbox" for="checkbox-2">
+									<input type="checkbox" id="checkbox-2" class="@Selection.CheckboxInput">
+									<span class="@Selection.CheckboxLabel">Option 2</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Cell @Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- TenFour Material Dropdown -->
+<div class=""mdtf--button__dropdown-btn"">
+	<button id=""select-btn"" class=""mdl-button mdl-js-button"">
+		<span>Select...</span>
+		<i class=""material-icons"" role=""presentation"">arrow_drop_down</i>
+	</button>
+	<ul for=""select-btn"" class=""mdl-menu mdl-js-menu mdl-menu--bottom-right"">
+		<li class=""mdl-menu__item default-item"" disabled>Select...</li>
+		<li class=""mdl-menu__item"">Option 1</li>
+		<li class=""mdl-menu__item"">Option 2</li>
+		<li class=""mdl-menu__item"">Option 3</li>
+		<li class=""mdl-menu__item"">Option 4</li>
+	</ul>
+</div>
+
+<!-- TenFour Material Dropdown w/ Checkboxes -->
+<div class=""mdtf--button__dropdown-btn"">
+	<button id=""check-select-btn"" class=""mdl-button mdl-js-button"">
+		<span>Select...</span>
+		<i class=""material-icons"" role=""presentation"">arrow_drop_down</i>
+	</button>
+	<ul for=""check-select-btn"" class=""mdl-menu mdl-js-menu mdl-menu--bottom-right"">
+		<li class=""mdl-menu__item default-item"" disabled>Select...</li>
+		<li class=""mdl-menu__item"">
+			<label class=""mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"" for=""checkbox-1"">
+				<input type=""checkbox"" id=""checkbox-1"" class=""mdl-checkbox__input"" checked>
+				<span class=""mdl-checkbox__label"">Option 1</span>
+			</label>
+		</li>
+		<li class=""mdl-menu__item"">
+			<label class=""mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"" for=""checkbox-2"">
+				<input type=""checkbox"" id=""checkbox-2"" class=""mdl-checkbox__input"" checked>
+				<span class=""mdl-checkbox__label"">Option 2</span>
+			</label>
+		</li>
+	</ul>
+</div>")</code></pre>
+				</div>
+			</section>
+
+		</dd>
+		<!-- DROPDOWN BUTTONS -- END -->
+	</dl>
+</section>

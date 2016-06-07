@@ -1,0 +1,31 @@
+﻿.mdi-black {
+	color: rgba(0, 0, 0, 1);
+}
+
+.mdi-blue {
+	color: rgba(0, 120, 230, 1);
+}
+
+.mdi-green {
+	color: rgba(28, 184, 65, 1);
+}
+
+.mdi-gray {
+	color: rgba(138,142,143, 1);
+}
+
+.mdi-gray-lt {
+	color: rgba(221, 221, 221,1);
+}
+
+.mdi-red {
+	color: rgba(220, 99, 97, 1);
+}
+
+.mdi-white {
+	color: rgba(255, 255, 255, 1);
+}
+
+.mdi-small {
+    font-size: 14px;
+}

@@ -1,0 +1,51 @@
+﻿@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Stepper = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Stepper
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="steppers" class="steppers-section">
+	<label class="@Typography.Display2">10-4 Material Steppers</label>
+	<dl>
+		<dt class="@Typography.Headline">Steppers</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Steppers convey progress through numbered steps. They may also be used for navigation.</div>
+
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Body2D">Horizontal Stepper</div>
+					<div class="@Typography.Caption">@Html.Raw("@Stepper.Horizontal")</div>
+					<div class="@Stepper.Horizontal @Shadow.Dp2">
+						<div class="@Stepper.Step @Stepper.IsActive">
+							<div class="@Stepper.Number">1</div>
+							<div class="@Stepper.Text">Step 1</div>
+							<div class="@Stepper.Connector"></div>
+						</div>
+						<div class="@Stepper.Step">
+							<div class="@Stepper.Number">2</div>
+							<div class="@Stepper.Text">Step 2</div>
+							<div class="@Stepper.Connector"></div>
+						</div>
+						<div class="@Stepper.Step">
+							<div class="@Stepper.Number">3</div>
+							<div class="@Stepper.Text">Step 3</div>
+							<div class="@Stepper.Connector"></div>
+						</div>
+						<div class="@Stepper.Step">
+							<div class="@Stepper.Number">4</div>
+							<div class="@Stepper.Text">Step 4</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Body2D">Vertical Stepper</div>
+					<div class="@Typography.Caption">@Html.Raw("@Stepper.Vertical")</div>
+					<div>Coming soon...</div>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

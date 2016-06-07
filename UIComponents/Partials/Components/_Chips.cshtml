@@ -1,0 +1,74 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Chip = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Chip
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="chips" class="chips-section">
+	<label class="@Typography.Display2">10-4 Material Chips</label>
+	<hr/>
+	<dl>
+		<dt class="@Typography.Headline">Chips</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Chips represent complex entities in small blocks, such as a contact. They can contain a photo, short title string, and brief information.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Chip = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Chip")</code></pre></div>
+			<!-- CHIPS EXAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Deletable Chip</div>
+					<div class="@Typography.Caption">@Html.Raw("@Chip.Text")</div>
+					<!-- DELETABLE CHIP EXAMPLE-->
+					<div class="@Chip.Deletable">
+						<span class="@Chip.Text">Deletable Chip</span>
+						<button class="@Chip.DeleteBtn @Button.FlatIcon">
+							<i class="@Icon.Material">@Icon.Type.Close</i>
+						</button>
+					</div>
+				</div>
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Non-deletable Chip</div>
+					<div class="@Typography.Caption">@Html.Raw("@Chip.NonDeletable")</div>
+					<!-- NON-DELETABLE CHIP EXAMPLE-->
+					<div class="@Chip.NonDeletable">
+						<span class="@Chip.Text">Non-deletable Chip</span>
+					</div>
+				</div>
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Contact Chip</div>
+					<div class="@Typography.Caption">@Html.Raw("@Chip.Contact")</div>
+					<!-- CONTACT CHIP EXAMPLE-->
+					<div class="@Chip.Contact">
+						<span class="@Chip.ContactCircle">c</span>
+						<span class="@Chip.Text">Contact Chip</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- DELETABLE CHIP EXAMPLE-->
+<div class=""mdtf-chip deletable"">
+	<span class=""mdtf-chip__text"">Deletable Chip</span>
+	<button class=""mdtf-chip__button mdl-button mdl-js-button mdl-button--icon"">
+		<i class=""material-icons"">close</i>
+	</button>
+</div>
+
+<!-- NON-DELETABLE CHIP EXAMPLE-->
+<div class=""mdtf-chip non-deletable"">
+	<span class=""mdtf-chip__text"">Non-deletable Chip</span>
+</div>
+
+<!-- CONTACT CHIP EXAMPLE-->
+<div class=""mdtf-chip contact"">
+	<span class=""contact-info"">c</span>
+	<span class=""mdtf-chip__text"">Contact Chip</span>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>
+
+

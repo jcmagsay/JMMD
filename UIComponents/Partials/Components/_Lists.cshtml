@@ -1,0 +1,564 @@
+﻿@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using List = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.List
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="lists" class="lists-section">
+	<label class="@Typography.Display2">10-4 Material Lists</label>
+	<dl>
+		<dt class="@Typography.Headline">Lists</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Lists present multiple line items in a vertical arrangement as a single continuous element.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using List = TenFour.CommonContent.Web.Utilities.MaterialUiConst.List")</code></pre></div>
+
+			<div class="@Typography.Title">Single Line Lists</div>
+			<!-- BEGIN LIST (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - TEXT-ONLY LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Text-Only List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextOnly")</div>
+					<!-- Text-Only List -->
+					<div class="@List.TextOnly">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.TextPrimary">Single-line item</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.TextPrimary">Single-line item</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.TextPrimary">Single-line item</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - TEXT-ONLY LIST -->
+				<!-- BEGIN - TEXT-ICON LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Text-Icon List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Text-Icon List -->
+					<div class="@List.TextIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Send</i>
+								<span class="@List.TextPrimary">Outbox</span>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Delete</i>
+								<span class="@List.TextPrimary">Trash</span>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Report</i>
+								<span class="@List.TextPrimary">Spam</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- BEGIN - TEXT-ICON LIST -->
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Text-Only List -->
+<div class=""@List.TextOnly"">
+	<div class=""@List.Row""><div class=""@List.Tile"">
+			<div class=""@List.TextPrimary"">Single-line item</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.TextPrimary"">Single-line item</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.TextPrimary"">Single-line item</div>
+		</div>
+	</div>
+</div>
+				
+<!-- Text-Icon List -->
+<div class=""@List.TextIcon"">
+<div class=""@List.Row"">
+	<div class=""@List.Tile"">
+		<i class=""@List.Icon @Icon.Material"">@Icon.Type.Send</i>
+		<span class=""@List.TextPrimary"">Outbox</span>
+	</div>
+</div>
+<div class=""@List.Row"">
+	<div class=""@List.Tile"">
+		<i class=""@List.Icon @Icon.Material"">@Icon.Type.Delete</i>
+		<span class=""@List.TextPrimary"">Trash</span>
+	</div>
+</div>
+<div class=""@List.Row"">
+	<div class=""@List.Tile"">
+		<i class=""@List.Icon @Icon.Material"">@Icon.Type.Report</i>
+		<span class=""@List.TextPrimary"">Spam</span>
+	</div>
+</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- BEGIN LIST (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - TEXT-AVATAR LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Text-Avatar List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextAvatar")</div>
+					<!-- Text-Avatar List -->
+					<div class="@List.TextAvatar">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="@List.TextPrimary">Cody Zeller</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Victor Oladipo</span>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Jordan Hulls</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - TEXT-AVATAR LIST -->
+				<!-- BEGIN - TEXT-AVATAR-ICON LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Text-Avatar-Icon List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextAvatarIcon")</div>
+					<!-- Text-Avatar-Icon List -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="@List.TextPrimary">Cody Zeller</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="@List.TextPrimary">Victor Oladipo</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="@List.TextPrimary">Jordan Hulls</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - TEXT-AVATAR-ICON LIST -->
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Text-Avatar List -->
+<div class=""@List.TextAvatar"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""@List.TextPrimary"">Cody Zeller</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<span class=""@List.TextPrimary"">Victor Oladipo</span>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<span class=""@List.TextPrimary"">Jordan Hulls</span>
+		</div>
+	</div>
+</div>
+
+<!-- Text-Avatar-Icon List -->
+<div class=""@List.TextAvatarIcon"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""@List.TextPrimary"">Cody Zeller</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""@List.TextPrimary"">Victor Oladipo</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""@List.TextPrimary"">Jordan Hulls</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<div class="@Typography.Title">Double Line Lists</div>
+			<!-- BEGIN LIST (GROUP 3) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - 2LINES-TEXT-ONLY LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Two-Line Text-Only List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon and @List.LineDouble")</div>
+					<!-- Two-Line Text-Only List -->
+					<div class="@List.TextOnly @List.LineDouble">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- BEGIN - 2LINES-TEXT-ICON LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Two-Line Text-Icon List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon and @List.LineDouble")</div>
+					<!-- Two-Line Text-Icon List -->
+					<div class="@List.TextIcon @List.LineDouble">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Send</i>
+								<div class="@List.TextContainer">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Delete</i>
+								<div class="@List.TextContainer">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<i class="@List.Icon @Icon.Material">@Icon.Type.Report</i>
+								<div class="@List.TextContainer">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- BEGIN - 2LINES-TEXT-ICON LIST -->
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Two-Line Text-Only List -->
+<div class=""@List.TextOnly @List.LineDouble"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Two-Line Text-Icon List -->
+<div class=""@List.TextIcon @List.LineDouble"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<i class=""@List.Icon @Icon.Material"">@Icon.Type.Send</i>
+			<div class=""@List.TextContainer"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<i class=""@List.Icon @Icon.Material"">@Icon.Type.Delete</i>
+			<div class=""@List.TextContainer"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<i class=""@List.Icon @Icon.Material"">@Icon.Type.Report</i>
+			<div class=""@List.TextContainer"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- BEGIN LIST (GROUP 4) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - 2LINES-TEXT-AVATAR LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Two-Line Text-Avatar List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextAvatar and @List.LineDouble")</div>
+					<!-- Two-Line Text-Avatar List -->
+					<div class="@List.TextAvatar @List.LineDouble">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- BEGIN - 2LINES-TEXT-AVATAR-ICON LIST -->
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Two-Line Text-Avatar-Icon List</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextAvatarIcon and @List.LineDouble")</div>
+					<!-- Two-Line Text-Avatar-Icon List -->
+					<div class="@List.TextAvatarIcon @List.LineDouble">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<div class="text-container">
+									<div class="@List.TextPrimary">Two-line item</div>
+									<div class="@List.TextSecondary">Secondary Text</div>
+								</div>
+								<i class="@Icon.Material @List.Icon">@Icon.Type.ChatBubble</i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - TEXT-AVATAR LIST -->
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Two-Line Text-Avatar List -->
+<div class=""@List.TextAvatar @List.LineDouble"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+		</div>
+	</div>
+</div>
+					
+<!-- Two-Line Text-Avatar-Icon List -->
+<div class=""@List.TextAvatarIcon @List.LineDouble"">
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+	<div class=""@List.Row"">
+		<div class=""@List.Tile"">
+			<div class=""@List.Avatar"">
+				<div class=""@List.AvatarIcon""></div>
+			</div>
+			<div class=""text-container"">
+				<div class=""@List.TextPrimary"">Two-line item</div>
+				<div class=""@List.TextSecondary"">Secondary Text</div>
+			</div>
+			<i class=""@Icon.Material @List.Icon"">@Icon.Type.ChatBubble</i>
+		</div>
+	</div>
+</div>")</code></pre>
+			</div>
+</section>
+
+		</dd>
+	</dl>
+</section>
+

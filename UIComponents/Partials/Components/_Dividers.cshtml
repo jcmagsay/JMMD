@@ -1,0 +1,258 @@
+﻿@using Divider = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Divider
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="dividers" class="dividers-section">
+	<label class="@Typography.Display2">10-4 Material Dividers</label>
+	<dl>
+		<dt class="@Typography.Headline">Dividers</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Dividers group and separate content within lists and page layouts. The divider is a thin rule, lightweight yet sufficient to distinguish content visually and spatially.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Divider = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Divider")</code></pre></div>
+			<div class="@Typography.Caption">BEWARE: Heavy use of dividers can lead to visual noise and dilute their impact.</div>
+
+			<!-- BEGIN -- FULL-BLEED DIVIDER -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Title">Full-bleed Divider</div>
+					<div class="@Typography.Body1D">
+						<div class="frame-flats">Full-bleed dividers separate distinct content sections (e.g., biographic details from contact information) or distinct content elements (e.g., list items) in both lists and page layouts.</div>
+						<div class="frame-top">Full-bleed dividers can also indicate seams in material where the material will expand when content is expanded.</div>
+					</div>
+				</div>
+			</section>
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Full-bleed Dark-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListFullBleedDk (on ul/container element)")</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.Base (on li/list-item/tile element)")</div>
+					<div class="@Typography.Body1D">
+						<!-- Full-bleed Dark Theme -->
+						<ul id="fullbleed--theme-dark" class="@Divider.ListFullBleedDk">
+							<li class="@Divider.Base">List Item 1</li>
+							<li class="@Divider.Base">List Item 2</li>
+							<li class="@Divider.Base">List Item 3</li>
+						</ul>
+					</div>
+				</div>
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Full-bleed Light-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListFullBleedLt (on ul/container element)")</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.Base (on li/list-item/tile element)")</div>
+					<div class="@Typography.Body1D">
+						<!-- Full-bleed Light Theme -->
+						<ul id="fullbleed--theme-light" class="@Divider.ListFullBleedLt">
+							<li class="@Divider.Base">List Item 1</li>
+							<li class="@Divider.Base">List Item 2</li>
+							<li class="@Divider.Base">List Item 3</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- END -- FULL-BLEED DIVIDER -->
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Full-bleed Dark Theme -->
+<ul id=""fullbleed--theme-dark"" class=""list__full-bleed theme-dark"">
+	<li class=""mdtf-divider"">List Item 1</li>
+	<li class=""mdtf-divider"">List Item 2</li>
+	<li class=""mdtf-divider"">List Item 3</li>
+</ul>
+
+<!-- Full-bleed Light Theme -->
+<ul id=""fullbleed--theme-light"" class=""list__full-bleed theme-light"">
+	<li class=""mdtf-divider"">List Item 1</li>
+	<li class=""mdtf-divider"">List Item 2</li>
+	<li class=""mdtf-divider"">List Item 3</li>
+</ul>")</code></pre>
+				</div>
+			</section>
+
+			<!-- BEGIN -- INSET DIVIDER -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Title">Inset Divider</div>
+					<div class="list">
+						<div class="frame-flats">Inset dividers separate related content, such as sections in a list of contacts or emails in a conversation.</div>
+						<div class="frame-top">Inset dividers should be used in conjunction with anchoring elements such as icons or avatars aligned with the Title Key Line.</div>
+					</div>
+				</div>
+			</section>
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Inset Dark-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListInsetDk and @Divider.Base (on ul/container element)")</div>
+					<div class="@Typography.Body1D">
+						<!-- Inset Dark-Theme -->
+						<div id="inset--theme-dark">
+							<ul class="@Divider.ListInsetDk @Divider.Base">
+								<li>List Item 1</li>
+								<li>List Item 2</li>
+								<li>List Item 3</li>
+							</ul>
+							<ul class="@Divider.ListInsetDk @Divider.Base">
+								<li>List Item 1</li>
+								<li>List Item 2</li>
+								<li>List Item 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Inset Light-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListInsetLt and @Divider.Base (on ul/container element)")</div>
+					<div class="@Typography.Body1D">
+						<!-- Inset Darkt-Theme -->
+						<div id="inset--theme-light">
+							<ul class="@Divider.ListInsetLt @Divider.Base">
+								<li>List Item 1</li>
+								<li>List Item 2</li>
+								<li>List Item 3</li>
+							</ul>
+							<ul class="@Divider.ListInsetLt @Divider.Base">
+								<li>List Item 1</li>
+								<li>List Item 2</li>
+								<li>List Item 3</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END -- INSET DIVIDER -->
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Inset Dark Theme -->
+<div id=""inset--theme-dark"">
+	<ul class=""list__inset theme-dark mdtf-divider"">
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ul>
+	<ul class=""list__inset theme-dark mdtf-divider"">
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ul>
+</div>
+				
+<!-- Inset Darkt-Theme -->
+<div id=""inset--theme-light"">
+	<ul class=""list__inset theme-light mdtf-divider"">
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ul>
+	<ul class=""list__inset theme-light mdtf-divider"">
+		<li>List Item 1</li>
+		<li>List Item 2</li>
+		<li>List Item 3</li>
+	</ul>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- BEGIN -- SUBHEADER DIVIDER -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Title">Subheaders and Dividers</div>
+					<div class="@Typography.Body1D">
+						<div class="frame-flats">When using a divider with a subheader, place the divider above the subheader to reinforce the relationship between the subheader and the content.</div>
+					</div>
+				</div>
+			</section>
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Subheader Divider Dark-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListSubheaderDk (on container element)")</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.Base (on sub-container element)")</div>
+					<!-- Subheader Dark-Theme -->
+					<div id="subheader--theme-dark">
+						<div class="@Divider.ListSubheaderDk">
+							<div class="@Divider.Base">
+								<div class="@Typography.SubheadingD">Subheading 1</div>
+								<span class="@Typography.Body1D">Tile 1</span>
+								<span class="@Typography.Body1D">Tile 2</span>
+								<span class="@Typography.Body1D">Tile 3</span>
+							</div>
+							<div class="@Divider.Base">
+								<div class="@Typography.SubheadingD @Divider.Base">Subheading 2</div>
+								<span class="@Typography.Body1D">Tile 1</span>
+								<span class="@Typography.Body1D">Tile 2</span>
+								<span class="@Typography.Body1D">Tile 3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Subheader Divider Light-Theme</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.ListSubheaderDk (on container element)")</div>
+					<div class="@Typography.Caption">@Html.Raw("@Divider.Base (on sub-container element)")</div>
+					<!-- Subheader Light-Theme -->
+					<div id="subheader--theme-light">
+						<div class="@Divider.ListSubheaderLt">
+							<div class="@Divider.Base">
+								<div class="@Typography.SubheadingD">Subheading 1</div>
+								<span class="@Typography.Body1D">Tile 1</span>
+								<span class="@Typography.Body1D">Tile 2</span>
+								<span class="@Typography.Body1D">Tile 3</span>
+							</div>
+							<div class="@Divider.Base">
+								<div class="@Typography.SubheadingD @Divider.Base">Subheading 2</div>
+								<span class="@Typography.Body1D">Tile 1</span>
+								<span class="@Typography.Body1D">Tile 2</span>
+								<span class="@Typography.Body1D">Tile 3</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END -- SUBHEADER DIVIDER -->
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Subheader Dark-Theme -->
+<div id=""subheader--theme-dark"">
+	<div class=""list__subheader theme-dark"">
+		<div class=""mdtf-divider"">
+			<div class=""mdtf-typography__subheading desktop"">Subheading 1</div>
+			<span class=""mdtf-typography__body1 desktop"">Tile 1</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 2</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 3</span>
+		</div>
+		<div class=""mdtf-divider"">
+			<div class=""mdtf-typography__subheading desktop mdtf-divider"">Subheading 2</div>
+			<span class=""mdtf-typography__body1 desktop"">Tile 1</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 2</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 3</span>
+		</div>
+	</div>
+</div>
+				
+<!-- Subheader Light-Theme -->
+<div id=""subheader--theme-light"">
+	<div class=""list__subheader theme-light"">
+		<div class=""mdtf-divider"">
+			<div class=""mdtf-typography__subheading desktop"">Subheading 1</div>
+			<span class=""mdtf-typography__body1 desktop"">Tile 1</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 2</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 3</span>
+		</div>
+		<div class=""mdtf-divider"">
+			<div class=""mdtf-typography__subheading desktop mdtf-divider"">Subheading 2</div>
+			<span class=""mdtf-typography__body1 desktop"">Tile 1</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 2</span>
+			<span class=""mdtf-typography__body1 desktop"">Tile 3</span>
+		</div>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>
+

@@ -1,0 +1,93 @@
+﻿[class^="mdtf-typography"] {
+	font-family: 'Roboto';
+}
+
+.mdtf-typography__display-4 {
+	color: rgba(0, 0, 0, .54);
+	font-weight: 100;
+	font-size: 112px;
+}
+
+.mdtf-typography__display-3 {
+	color: rgba(0, 0, 0, .54);
+	font-weight: 400;
+	font-size: 56px;
+}
+
+.mdtf-typography__display-2 {
+	color: rgba(0, 0, 0, .54);
+	font-weight: 400;
+	font-size: 45px;
+}
+
+.mdtf-typography__display-1 {
+	color: rgba(0, 0, 0, .54);
+	font-weight: 400;
+	font-size: 34px;
+}
+
+.mdtf-typography__headline {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.mdtf-typography__title {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.mdtf-typography__subheading.device {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.mdtf-typography__subheading.desktop {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.mdtf-typography__body2.device {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.mdtf-typography__body2.desktop {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 700;
+	font-size: 13px;
+}
+
+.mdtf-typography__body1.device {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.mdtf-typography__body1.desktop {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.mdtf-typography__caption {
+	color: rgba(0, 0, 0, .54);
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.mdtf-typography__menu {
+	color: rgba(0, 0, 0, .87);
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.mdtf-typography__button {
+	color: rgba(0, 0, 0, .87);
+	font-weight: 700;
+	font-size: 14px;
+}

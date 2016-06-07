@@ -1,0 +1,291 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Dialog = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Dialog
+@using Divider = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Divider
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Hybrid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Hybrid
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using List = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.List
+@using Selection = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Selection
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Textfield = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Textfield
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="hybrid" class="hybrid-section">
+	<label class="@Typography.Display2">10-4 Material Hybrid Components</label>
+	<dl>
+		<dt class="@Typography.Headline">Multiselect Dropdowns</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">The following dropdown components aren't referenced in the Material Design Guidelines. These components, however, follow the guidelines and contain multiple concepts and specs that follow Material principles.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Hybrid = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Hybrid")</code></pre></div>
+
+			<!-- TOOLTIPS -->
+			<section class="@Grid.Grid">
+
+				<!-- BEGIN MULTISELECT DROPDOWN WITH SEARCH -->
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Basic</div>
+					<div class="@Typography.Caption">@Html.Raw("@Tooltip.Base")</div>
+					<!-- Multiselect Dropdown -->
+					<div class="@Hybrid.HybridDd" data-bind="with: multiDdData">
+						<button id="multi-dd" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+						<div class="@Dialog.Base @Shadow.Dp4" for="multi-dd">
+							<div class="@Dialog.Content">
+
+								<section class="@Dialog.Actions">
+									<label class="@Selection.Checkbox shim-top" for="selectall-1" data-bind="multiDdSelectAll: selectAllCheckbox">
+										<input type="checkbox" class="@Selection.CheckboxInput" id="selectall-1" data-bind="checked: selectAllCheckbox">
+										<span class="@Selection.CheckboxLabel" data-bind="text: 'All'"></span>
+									</label>
+									<button class="@Button.FlatColorPrimary mdl-typography--text-right" data-bind="click: clear">clear</button>
+								</section>
+
+								<div class="@List.TextIcon" data-bind="foreach: data">
+									<div class="@List.Row">
+										<div class="@List.Tile">
+											<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox-'+id()}">
+												<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox-'+id()}">
+												<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BEGIN MULTISELECT DROPDOWN WITH DIVIDER -->
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Divider</div>
+					<div class="@Typography.Caption">@Html.Raw("@Tooltip.Base")</div>
+					<!-- Multiselect Dropdown -->
+					<div class="@Hybrid.HybridDd" data-bind="with: multiDdDividerData" data-ddtype="divider">
+						<button id="multi-dd-divider" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+
+						<div class="@Dialog.Base @Shadow.Dp4" for="multi-dd-divider">
+							<div class="@Dialog.Content">
+
+								<section class="@Dialog.Actions">
+									<label class="@Selection.Checkbox shim-top" for="selectall-2" data-bind="multiDdSelectAll: selectAllCheckbox">
+										<input type="checkbox" class="@Selection.CheckboxInput" id="selectall-2" data-bind="checked: selectAllCheckbox">
+										<span class="@Selection.CheckboxLabel" data-bind="text: 'All'"></span>
+									</label>
+									<button class="@Button.FlatColorPrimary mdl-typography--text-right" data-bind="click: clear">clear</button>
+								</section>
+
+								<div class="@Typography.SubheadingD">Selected</div>
+
+								<div class="@List.TextIcon @Divider.Base @Divider.ListInsetLt" data-bind="foreach: data">
+									<div class="@List.Row">
+										<div class="@List.Tile">
+											<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox2-'+id()}">
+												<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox2-'+id()}">
+												<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="@Typography.SubheadingD frame-top">Unselected</div>
+
+
+								<div class="@List.TextIcon" data-bind="foreach: data">
+									<div class="@List.Row">
+										<div class="@List.Tile">
+											<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox2-'+id()}">
+												<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox2-'+id()}">
+												<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BEGIN MULTISELECT DROPDOWN WITH SEARCH -->
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Search</div>
+					<div class="@Typography.Caption">@Html.Raw("@Tooltip.Base")</div>
+					<!-- Multiselect Dropdown -->
+					<div class="@Hybrid.HybridDd" data-bind="with: multiDdSearchData" data-ddtype="search">
+						<button id="multi-dd-search" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+
+						<div class="@Dialog.Base @Shadow.Dp4" for="multi-dd-search">
+							<div class="@Dialog.Content">
+								<section class="@Dialog.ContentTitle">
+									<div class="@Textfield.Floating search" data-bind="css: checkInvalid()">
+										<input class="@Textfield.Input" type="text" id="search" data-bind="value: searchStr, valueUpdate: 'keyup'">
+										<label class="@Textfield.Label" for="search">
+											<i class="@Icon.Material">@Icon.Type.Search</i>
+											<span>Search...</span>
+										</label>
+										<span class="@Textfield.Error" data-bind="visible: noSearchResults, text: noSearchResultsText"></span>
+									</div>
+								</section>
+
+								<section data-bind="visible: (!noSearchResults())">
+
+									<section class="@Dialog.Actions">
+										<label class="@Selection.Checkbox shim-top" for="selectall-3" data-bind="multiDdSelectAll: selectAllCheckbox">
+											<input type="checkbox" class="@Selection.CheckboxInput" id="selectall-3" data-bind="checked: selectAllCheckbox">
+											<span class="@Selection.CheckboxLabel" data-bind="text: 'All'"></span>
+										</label>
+										<button class="@Button.FlatColorPrimary mdl-typography--text-right" data-bind="click: clear">clear</button>
+									</section>
+
+									<div class="@Dialog.ContentSupportingText">
+										<div class="@List.TextIcon" data-bind="foreach: data">
+											<div class="@List.Row" data-bind="visible: isVisible">
+												<div class="@List.Tile @Divider.ListInsetLt">
+													<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox3-'+id()}">
+														<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox3-'+id()}">
+														<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BEGIN MULTISELECT DROPDOWN WITH DIVIDER AND SEARCH -->
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Dividers and Search</div>
+					<div class="@Typography.Caption">@Html.Raw("@Tooltip.Base")</div>
+					<!-- Multiselect Dropdown -->
+					<div class="mdtf-hybrid__multiselect-dd" data-bind="with: multiDdDividerSearchData" data-ddtype="divider-search">
+						<button id="multi-dd-search-divider" class="@Button.Flat">
+							<span>Select...</span>
+							<i class="@Icon.Material" role="presentation">@Icon.Type.ArrowDropDown</i>
+						</button>
+						<div class="@Dialog.Base @Shadow.Dp4" for="multi-dd-search-divider">
+
+							<div class="@Dialog.Content">
+								<section class="@Dialog.ContentTitle">
+									<div class="@Textfield.Floating search" data-bind="css: checkInvalid()">
+										<input class="@Textfield.Input" type="text" id="search2" data-bind="value: searchStr, valueUpdate: 'keyup'">
+										<label class="@Textfield.Label" for="search2">
+											<i class="@Icon.Material">@Icon.Type.Search</i>
+											<span>Search...</span>
+										</label>
+										<span class="@Textfield.Error" data-bind="visible: noSearchResults, text: noSearchResultsText"></span>
+									</div>
+								</section>
+
+								<section data-bind="visible: (!noSearchResults())">
+									<section class="@Dialog.Actions">
+										<label class="@Selection.Checkbox shim-top" for="selectall-4" data-bind="multiDdSelectAll: selectAllCheckbox">
+											<input type="checkbox" class="@Selection.CheckboxInput" id="selectall-4" data-bind="checked: selectAllCheckbox">
+											<span class="@Selection.CheckboxLabel" data-bind="text: 'All'"></span>
+										</label>
+										<button class="@Button.FlatColorPrimary mdl-typography--text-right" data-bind="click: clear">clear</button>
+									</section>
+
+									<section class="@Dialog.ContentSupportingText">
+										<div class="@Typography.Body2D">Selected</div>
+										<div class="@Typography.Caption" data-bind="visible: noDataSelected, text: noDataSelectedText"></div>
+										<div class="@List.TextIcon @Divider.Base @Divider.ListInsetLt" data-bind="foreach: selected">
+											<div class="@List.Row" data-bind="visible: isVisible">
+												<div class="@List.Tile @Divider.ListInsetLt">
+													<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox4-'+id()}">
+														<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox4-'+id()}">
+														<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="@Typography.Body2D frame-top">Unselected</div>
+										<div class="@Typography.Caption" data-bind="visible: noDataUnselected, text: noDataUnselectedText"></div>
+										<div class="@List.TextIcon @Divider.Base @Divider.ListInsetLt" data-bind="foreach: unselected">
+											<div class="@List.Row" data-bind="visible: isVisible">
+												<div class="@List.Tile">
+													<label class="@Selection.Checkbox" data-bind="attr: {id: 'checkbox4-'+id()}">
+														<input type="checkbox" class="@Selection.CheckboxInput" data-bind="checked: isChecked, attr: {id: 'checkbox4-'+id()}">
+														<span class="@Selection.CheckboxLabel" data-bind="text: name"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</section>
+								</section>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"
+")</code></pre>
+				</div>
+			</section>
+		</dd>
+		<dt class="@Typography.Headline">Fab Dropdowns</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">The following dropdown components aren't referenced in the Material Design Guidelines. These components, however, follow the guidelines and contain multiple concepts and specs that follow Material principles.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Hybrid = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Hybrid")</code></pre></div>
+
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Fab Dropdown Left</div>
+					<div class="@Typography.Caption">@Html.Raw("@Hybrid.FabDd @Hybrid.Position.Left")</div>
+					<section class="@Hybrid.FabDd @Hybrid.Position.Left">
+						<button class="@Button.FabMini @Button.Action"><i class="@Icon.Mdi @Icon.MdiType.MapMarker"></i></button>
+						<div class="@Dialog.Fab">
+							<div class="@Dialog.Content @Shadow.Dp4">[CONTENT HERE]</div>
+						</div>
+					</section>
+				</div>
+
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Fab Dropdown Right</div>
+					<div class="@Typography.Caption">@Html.Raw("@Hybrid.FabDd @Hybrid.Position.Right")</div>
+					<section class="@Hybrid.FabDd @Hybrid.Position.Right">
+						<button class="@Button.FabMini @Button.Action"><i class="@Icon.Mdi @Icon.MdiType.MapMarker"></i></button>
+						<div class="@Dialog.Fab">
+							<div class="@Dialog.Content @Shadow.Dp4">[CONTENT HERE]</div>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- FAB Dropdown Left -->
+<section class='@Hybrid.FabDd @Hybrid.Position.Left'>
+	<button class='@Button.FabMini @Button.Action'><i class='@Icon.Mdi @Icon.MdiType.MapMarker'></i></button>
+	<div class='@Dialog.Fab'>
+		<div class='@Dialog.Content @Shadow.Dp4'>[CONTENT HERE]</div>
+	</div>
+</section>
+
+<!-- FAB Dropdown Right -->
+<section class='@Hybrid.FabDd @Hybrid.Position.Right'>
+	<button class='@Button.FabMini @Button.Action'><i class='@Icon.Mdi @Icon.MdiType.MapMarker'></i></button>
+	<div class='@Dialog.Fab'>
+		<div class='@Dialog.Content @Shadow.Dp4'>[CONTENT HERE]</div>
+	</div>
+</section>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+</section>

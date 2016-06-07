@@ -1,0 +1,114 @@
+﻿<section id="textfields" class="textfields-section">
+	<label class="mdtf-typography__display-2">10-4 Material Inputs/Textfields</label>
+	<dl>
+		<dt class="mdtf-typography__display-title">Textfields</dt>
+		<dd>
+			<span class="mdtf-typography__display-body-1--desktop">Text fields allow the user to input text, select text (cut, copy, paste), and lookup data via auto-completion.</span>
+			<div class="mdl-grid">
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Simple Textfield</div>
+					<!-- Simple Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="sample1">
+						<label class="mdl-textfield__label" for="sample1">Text...</label>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Numberic Textfield</div>
+					<!-- Numeric Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+						<label class="mdl-textfield__label" for="sample2">Number...</label>
+						<span class="mdl-textfield__error">Input is not a number!</span>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Textfield with Floating Label</div>
+					<!-- Textfield with Floating Label -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="sample3">
+						<label class="mdl-textfield__label" for="sample3">Text...</label>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Numeric Textfield with Floating Label</div>
+					<!-- Numeric Textfield with Floating Label -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+						<label class="mdl-textfield__label" for="sample4">Number...</label>
+						<span class="mdl-textfield__error">Input is not a number!</span>
+					</div>
+				</form>
+			</div>
+
+			<div class="mdl-grid">
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Floating Multiline Textfield</div>
+					<!-- Floating Multiline Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<textarea class="mdl-textfield__input" type="text" rows="1" id="sample5"></textarea>
+						<label class="mdl-textfield__label" for="sample5">Text lines...</label>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Numeric Textfield with Floating Label</div>
+					<!-- Expandable Textfield -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+						<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+							<i class="material-icons">search</i>
+						</label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="text" id="sample6">
+							<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+						</div>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Alphabet Pattern-Based Textfield</div>
+					<!-- Text Pattern Based Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="user" pattern="[A-Z,a-z, ]*">
+						<label class="mdl-textfield__label" for="user">User name</label>
+						<span class="mdl-textfield__error">Letters and spaces only</span>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--3-col">
+					<div class="mdtf-typography__display-body-2--desktop">Telephone Pattern-Based Textfield</div>
+					<!-- Numerical Pattern Based Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" id=" phone">
+						<label class="mdl-textfield__label" for="phone">Phone</label>
+						<span class="mdl-textfield__error">Incorrect number format. Correct format is (###) ### ####</span>
+					</div>
+				</form>
+			</div>
+
+			<div class="mdl-grid">
+				<form action="#" class="mdl-cell mdl-cell--6-col">
+					<div class="mdtf-typography__display-body-2--desktop">Dropdown Typeahead</div>
+					<!-- Floating Multiline Textfield -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="sample1">
+						<label class="mdl-textfield__label" for="sample1">
+							<i class="material-icons">search</i>
+							<span>Search...</span>
+						</label>
+					</div>
+				</form>
+				<form action="#" class="mdl-cell mdl-cell--6-col">
+					<div class="mdtf-typography__display-body-2--desktop">Dropdown Typeahead with Checkboxes</div>
+					<!-- Expandable Textfield -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+						<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+							<i class="material-icons">search</i>
+						</label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="text" id="sample6">
+							<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</dd>
+	</dl>
+</section>

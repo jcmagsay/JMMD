@@ -1,0 +1,383 @@
+﻿@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using List = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.List
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="list-controls" class="list-controls-section">
+	<label class="@Typography.Display2">10-4 Material List Controls</label>
+	<dl>
+		<dt class="@Typography.Headline">List Controls</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">List controls are icons that appear to the left or right of the list text. They indicate the state of a list item, information about a list item, or serve as an action related to the list item.</div>
+			<div class="@Typography.Title">Types of List Controls</div>
+			<!-- BEGIN LIST (GROUP 1) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - CHECKBOX PRIMARY: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Checkbox Primary: List Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextOnly")</div>
+					<!-- Checkbox: List Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-primary-1">
+										<input type="checkbox" id="checkbox-primary-1" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.ChatBubble</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-primary-2">
+										<input type="checkbox" id="checkbox-primary-2" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.ChatBubble</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-primary-3">
+										<input type="checkbox" id="checkbox-primary-3" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.ChatBubble</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - CHECKBOX PRIMARY: LIST CONTROL -->
+				<!-- BEGIN - CHECKBOX SECONDARY: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Checkbox Secondary: List Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Switch: List Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-secondary-1">
+										<input type="checkbox" id="checkbox-secondary-1" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-secondary-2">
+										<input type="checkbox" id="checkbox-secondary-2" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-secondary-3">
+										<input type="checkbox" id="checkbox-secondary-3" class="mdl-checkbox__input" checked>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - CHECKBOX SECONDARY: LIST CONTROL -->
+				<!-- BEGIN - SWITCH: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Switch: List Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Switch: List Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-secondary-1">
+										<input type="checkbox" id="switch-secondary-1" class="mdl-switch__input" checked>
+										<span class="mdl-switch__label"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-secondary-2">
+										<input type="checkbox" id="switch-secondary-2" class="mdl-switch__input" checked>
+										<span class="mdl-switch__label"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-secondary-3">
+										<input type="checkbox" id="switch-secondary-3" class="mdl-switch__input" checked>
+										<span class="mdl-switch__label"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - SWITCH: LIST CONTROL -->
+			</section>
+
+			<!-- BEGIN LIST (GROUP 2) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - REORDER: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Reorder: List Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextOnly")</div>
+					<!-- Reorder: List Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.Reorder</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.Reorder</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.Avatar">
+									<div class="@List.AvatarIcon"></div>
+								</div>
+								<span class="@List.TextPrimary">Outbox</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.Reorder</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - REORDER: LIST CONTROL -->
+				<!-- BEGIN - EXPAND/COLLAPSE: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Expand/Collapse: List Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Expand/Collapse: List Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Chat</i>
+								</div>
+								<span class="@List.TextPrimary">Chat</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowDown</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.TrendingUp</i>
+								</div>
+								<span class="@List.TextPrimary">Trending</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowDown</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.FitnessCenter</i>
+								</div>
+								<span class="@List.TextPrimary">Workouts</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowDown</i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - EXPAND/COLLAPSE: LIST CONTROL -->
+				<!-- BEGIN - LEAVE BEHIND SECONDARY: LIST CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Leave-Behind: List Control</div>
+					<div class="@Typography.Caption">Leave-behinds are list controls, which are revealed only upon swipe. A leave-behind is an informative hint as to what swiping a list item away will do to that item. The leave-behind can transform into an action. Since leave behinds are used for swiping/non-mobile interactions, 10-4 will avoid this component. More info can be found at the following link: <a href="https://www.google.com/design/spec/components/lists-controls.html">Leave-behinds</a></div>
+
+				</div>
+				<!-- END - LEAVE BEHIND: LIST CONTROL -->
+			</section>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt class="@Typography.Headline">Menu Controls</dt>
+		<dd>
+			<span class="@Typography.SubheadingD frame-bottom">A menu is a special type of list. In menus, use controls that are appropriate for dropdown menus, overflow menus, and so on. Don’t use these controls in regular lists. Use the regular list controls instead.</span>
+			<div class="@Typography.Title">Types of Menu Controls</div>
+			<!-- BEGIN LIST (GROUP 3) -->
+			<section class="@Grid.Grid">
+				<!-- BEGIN - CHECKS: MENU CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Checks: Menu Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextOnly")</div>
+					<!-- Checks: Menu Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Check</i>
+								</div>
+								<span class="@List.TextPrimary">Item 1: Selected</span>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Check</i>
+								</div>
+								<span class="@List.TextPrimary">Item 2: Selected</span>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary"></div>
+								<span class="@List.TextPrimary">Item 3: Unselected</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - CHECKS: MENU CONTROL -->
+
+				<!-- BEGIN - INLINE INFORMATION: MENU CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Inline Information: Menu Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Inline Information: Menu Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Domain</i>
+								</div>
+								<span class="@List.TextPrimary">Facility</span>
+								<div class="@List.ActionSecondary">#fac</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Group</i>
+								</div>
+								<span class="@List.TextPrimary">Partner</span>
+								<div class="@List.ActionSecondary">#part</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<div class="@List.ActionPrimary">
+									<i class="@Icon.Material">@Icon.Type.Schedule</i>
+								</div>
+								<span class="@List.TextPrimary">Pickup Date</span>
+								<div class="@List.ActionSecondary">#pu</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END - INLINE INFORMATION: MENU CONTROL -->
+
+				<!-- BEGIN - NESTED MENU INDICATOR: MENU CONTROL -->
+				<div class="@Grid.Col4">
+					<div class="@Typography.Body2D">Nested Menu Indicator: Menu Control</div>
+					<div class="@Typography.Caption">@Html.Raw("@List.TextIcon")</div>
+					<!-- Nested Menu Indicator: Menu Control -->
+					<div class="@List.TextAvatarIcon">
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<span class="@List.TextPrimary">Menu</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowRight</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<span class="@List.TextPrimary">Trending</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowRight</i>
+								</div>
+							</div>
+						</div>
+						<div class="@List.Row">
+							<div class="@List.Tile">
+								<span class="@List.TextPrimary">Workouts</span>
+								<div class="@List.ActionSecondary">
+									<i class="@Icon.Material">@Icon.Type.KeyboardArrowRight</i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- END - NESTED MENU INDICATOR: MENU CONTROL -->
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12"><pre><code class="language-markup">@HttpUtility.HtmlDecode(@"")</code></pre></div>
+			</section>
+
+
+		</dd>
+	</dl>
+</section>
+
+

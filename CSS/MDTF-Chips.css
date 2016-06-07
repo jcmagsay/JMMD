@@ -1,0 +1,68 @@
+﻿/*** BASE CHIP ***/
+.mdtf-chip {
+	background-color: rgba(153, 153, 153, 0.2);
+	border-radius: 32px;
+	color: rgba(0, 0, 0, .87);
+	display: inline-flex;
+	font-family: Roboto;
+	height: 32px;
+}
+	/*** DELETABLE CHIP HOVER STATE ***/
+	.mdtf-chip.deletable:hover {
+		background-color: rgba(0, 0, 0, .54);
+		color: rgba(255, 255, 255,.95);
+	}
+	/*** CHIP TEXT ***/	
+	.mdtf-chip .mdtf-chip__text {
+		font-size: 14px;
+		font-weight: normal;
+		padding: 7px 0;
+	}
+		.mdtf-chip.deletable .mdtf-chip__text {
+			margin-left: 12px;
+		}
+		.mdtf-chip.non-deletable .mdtf-chip__text {
+			margin: 0 12px;
+		}
+		.mdtf-chip.contact .mdtf-chip__text {
+			margin: 0 12px 0 8px;
+		}
+	/*** CHIP BUTTON ***/	
+	.mdtf-chip__button {
+		background-color: rgba(0, 0, 0, .54);
+		height: 18px;
+		margin: 7px;
+		max-width: 18px;
+		min-width: 18px;
+		width: 18px;
+	}
+		.mdtf-chip:hover .mdtf-chip__button {
+			background-color: rgba(255, 255, 255, .95);
+		}
+		/*** CHIP ICON ***/	
+		.mdtf-chip__button > i.material-icons {
+			border-radius: 18px;
+			color: rgba(235, 235, 235,.85);
+			font-size: 12px;
+			line-height: 12px;
+			max-width: 12px;
+			min-width: 12px;
+			width: 12px;
+			transform: translate(-6px,-6px);
+		}
+			.mdtf-chip:hover .mdtf-chip__button > i.material-icons {
+				color: rgba(0,0,0,.85);
+			}
+	/*** CHIP CONTACT INFO ***/
+	.mdtf-chip.contact .contact-circle {
+		border-radius: 18px;
+		background-color: #673AB7;
+		color: #fff;
+		height: 32px;
+		max-width: 32px;
+		min-width: 32px;
+		padding: 9px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 32px;
+	}

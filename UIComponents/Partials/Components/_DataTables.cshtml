@@ -1,0 +1,364 @@
+﻿@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icons = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using DataTable = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.DataTable
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+@{
+	var emailPattern = @"[^@]+@[^@]+\.[a-zA-Z]{2,6}";
+}
+
+
+
+<section id="data-tables" class="data-tables-section">
+	<label class="@Typography.Display2">10-4 Material Data Tables</label>
+	<hr/>
+	<dl>
+		<dt class="@Typography.Title">Data Tables</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Data tables are used to present raw data sets, and usually appear in desktop enterprise products.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using DataTable = TenFour.CommonContent.Web.Utilities.MaterialUiConst.DataTable")</code></pre></div>
+
+			<!-- BEGIN -- BASIC DATA TABLE -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<span class="@Typography.Body2D">Basic Data Table</span>
+					<div class="@Typography.Caption">@Html.Raw("@DataTable.Base")</div>
+					<!-- Data Table-->
+					<table class="@DataTable.Base @Shadow.Dp2 @Shadow.Dp2">
+						<thead>
+						<tr>
+							<th class="@DataTable.CellNonNumeric">Material</th>
+							<th>Quantity</th>
+							<th>Unit price</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Acrylic (Transparent)</td>
+							<td>25</td>
+							<td>$2.90</td>
+						</tr>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Plywood (Birch)</td>
+							<td>50</td>
+							<td>$1.25</td>
+						</tr>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Laminate (Gold on Blue)</td>
+							<td>10</td>
+							<td>$2.35</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="@Grid.Col6">
+					<span class="@Typography.Body2D">Selectable Data Table</span>
+					<div class="@Typography.Caption">@Html.Raw("@DataTable.Selectable")</div>
+					<!-- Selectable Data Table-->
+					<table class="@DataTable.Selectable @Shadow.Dp2">
+						<thead>
+						<tr>
+							<th class="@DataTable.CellNonNumeric">Material</th>
+							<th>Quantity</th>
+							<th>Unit price</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Acrylic (Transparent)</td>
+							<td>25</td>
+							<td>$2.90</td>
+						</tr>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Plywood (Birch)</td>
+							<td>50</td>
+							<td>$1.25</td>
+						</tr>
+						<tr>
+							<td class="@DataTable.CellNonNumeric">Laminate (Gold on Blue)</td>
+							<td>10</td>
+							<td>$2.35</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!-- END -- BASIC DATA TABLE -->
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- Data Table -->
+<table class=""mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"">
+	<thead>
+		<tr>
+			<th class=""mdl-data-table__cell--non-numeric"">Material</th>
+			<th>Quantity</th>
+			<th>Unit price</th>
+		</tr>
+	</thead>
+	<tbody>
+		...
+		<tr>
+			<td class=""mdl-data-table__cell--non-numeric"">Acrylic (Transparent)</td>
+			<td>25</td>
+			<td>$2.90</td>
+		</tr>
+		...
+	</tbody>
+</table>
+<!-- Selectable Data Table-->
+<table class=""@DataTable.MdlSelectable @Shadow.Dp2"">
+	<thead>
+		<tr>
+			<th class=""mdl-data-table__cell--non-numeric"">Material</th>
+			<th>Quantity</th>
+			<th>Unit price</th>
+		</tr>
+	</thead>
+	<tbody>
+		...
+		<tr>
+			<td class=""mdl-data-table__cell--non-numeric"">Acrylic (Transparent)</td>
+			<td>25</td>
+			<td>$2.90</td>
+		<tr>
+		...
+	</tbody>
+</table>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt class="@Typography.Title">Responsive Data Table</dt>
+		<dd>
+			<span class="@Typography.Body1D">Data tables are used to present raw data sets, and usually appear in desktop enterprise products.</span>
+			<!-- BEGIN -- RESPONSIVE DATA TABLE -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<span class="@Typography.Body2D">Responsive Data Table</span>
+					<div class="@Typography.Caption">@Html.Raw("Container: @DataTable.ContainerResponsive @Shadow.Dp1 and Table: @DataTable.Responsive")</div>
+					<!-- Responsive Data Table-->
+					<div class="@DataTable.ContainerResponsive @Shadow.Dp1">
+						<table id="table" class="@DataTable.Responsive">
+							<thead>
+							<tr>
+								<th>ID</th>
+								<th>Brand</th>
+								<th>Make</th>
+								<th>Model</th>
+								<th>Year</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td data-title="ID">1</td>
+								<td data-title="Brand">AMC</td>
+								<td data-title="Make">Rebel</td>
+								<td data-title="Model">Machine</td>
+								<td data-title="Year">1970</td>
+							</tr>
+							<tr>
+								<td data-title="ID">2</td>
+								<td data-title="Brand">Chevrolet</td>
+								<td data-title="Make">Corvette</td>
+								<td data-title="Model">Stingray</td>
+								<td data-title="Year">1963</td>
+							</tr>
+							<tr>
+								<td data-title="ID">3</td>
+								<td data-title="Brand">Ford</td>
+								<td data-title="Make">Mustang</td>
+								<td data-title="Model">429 Super Cobra Jet</td>
+								<td data-title="Year">1971</td>
+							</tr>
+							<tr>
+								<td data-title="ID">4</td>
+								<td data-title="Brand">Plymouth</td>
+								<td data-title="Make">GTX</td>
+								<td data-title="Model">440 Six Pack</td>
+								<td data-title="Year">1970</td>
+							</tr>
+							<tr>
+								<td data-title="ID">5</td>
+								<td data-title="Brand">Pontiac</td>
+								<td data-title="Make">GTO</td>
+								<td data-title="Model">--</td>
+								<td data-title="Year">1964</td>
+							</tr>
+							<tr>
+								<td data-title="ID">6</td>
+								<td data-title="Brand">Mercury</td>
+								<td data-title="Make">Cougar Eliminator</td>
+								<td data-title="Model">428 Cobra Jet</td>
+								<td data-title="Year">1969</td>
+							</tr>
+							<tr>
+								<td data-title="ID">7</td>
+								<td data-title="Brand">Ford</td>
+								<td data-title="Make">Boss</td>
+								<td data-title="Model">429</td>
+								<td data-title="Year">1969</td>
+							</tr>
+							<tr>
+								<td data-title="ID">8</td>
+								<td data-title="Brand">Buick</td>
+								<td data-title="Make">GSX</td>
+								<td data-title="Model">455 Stage 1</td>
+								<td data-title="Year">1970</td>
+							</tr>
+							<tr>
+								<td data-title="ID">9</td>
+								<td data-title="Brand">Oldsmobile</td>
+								<td data-title="Make">--</td>
+								<td data-title="Model">422</td>
+								<td data-title="Year">1970</td>
+							</tr>
+							<tr>
+								<td data-title="ID">10</td>
+								<td data-title="Brand">Dodge</td>
+								<td data-title="Make">Charger 500</td>
+								<td data-title="Model">426 Hemi</td>
+								<td data-title="Year">1969</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<!-- END -- RESPONSIVE DATA TABLE -->
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<div class=""table-responsive-vertical shadow-z-1"">
+	<table id=""table"" class=""table table-hover table-mc-light-blue"">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Brand</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+			...
+			<tr>
+				<td data-title=""ID"">1</td>
+				<td data-title=""Brand"">AMC</td>
+				<td data-title=""Make"">Rebel</td>
+				<td data-title=""Model"">Machine</td>
+				<td data-title=""Year"">1970</td>
+			</tr>
+			...
+		</tbody>
+	</table>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+
+	<dl>
+		<dt class="@Typography.Title">Editable Data Table</dt>
+		<dd>
+			<span class="@Typography.Body1D">Editable Data Tables have editable fields. The text fields are disabled until the edit button is pressed to allow the textfield to be updated.</span>
+			<!-- BEGIN -- RESPONSIVE DATA TABLE -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<span class="@Typography.Body2D">Editable Data Table</span>
+					<div class="@Typography.Caption">@Html.Raw("Table: @DataTable.Base and @DataTable.Editable")</div>
+					<!-- Responsive Data Table-->
+					<table id="table-editable" class="@DataTable.Base @DataTable.Editable">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="ID">1</td>
+									<td data-title="Name">Broker</td>
+									<td data-title="Email">
+										<div class="mdl-textfield mdl-js-textfield">
+											<input class="mdl-textfield__input" type="email" id="editable-textfield-1" pattern="@emailPattern" placeholder="broker@example.com" disabled>
+											<label class="mdl-textfield__label" for="editable-textfield-1"></label>
+											<span class="mdl-textfield__error">Input is not a valid email!</span>
+										</div>
+									</td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Edit</i></button></td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Delete</i></button></td>
+								</tr>
+								<tr>
+									<td data-title="ID">2</td>
+									<td data-title="Name">Shipper</td>
+									<td data-title="Email">
+										<div class="mdl-textfield mdl-js-textfield">
+											<input class="mdl-textfield__input" type="email" id="editable-textfield-2" pattern="@emailPattern" placeholder="shipper@example.com" disabled>
+											<label class="mdl-textfield__label" for="editable-textfield-2"></label>
+											<span class="mdl-textfield__error">Input is not a valid email!</span>
+										</div>
+									</td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Edit</i></button></td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Delete</i></button></td>
+								</tr>
+								<tr>
+									<td data-title="ID">3</td>
+									<td data-title="Name">Carrier</td>
+									<td data-title="Email">
+										<div class="mdl-textfield mdl-js-textfield">
+											<input class="mdl-textfield__input" type="email" id="editable-textfield-3" pattern="@emailPattern" placeholder="carrier@example.com" disabled>
+											<label class="mdl-textfield__label" for="editable-textfield-3"></label>
+											<span class="mdl-textfield__error">Input is not a valid email!</span>
+										</div>
+									</td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Edit</i></button></td>
+									<td data-title=""><button class="mdl-button mdl-js-button mdl-button--icon"><i class="@Icons.Material">@Icons.Type.Delete</i></button></td>
+								</tr>
+							</tbody>
+						</table>
+				</div>
+			</section>
+			<!-- END -- RESPONSIVE DATA TABLE -->
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<div class=""table-responsive-vertical shadow-z-1"">
+	<table id=""table"" class=""table table-hover table-mc-light-blue"">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Brand</th>
+				<th>Make</th>
+				<th>Model</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+			...
+			<tr>
+				<td data-title=""ID"">1</td>
+				<td data-title=""Brand"">AMC</td>
+				<td data-title=""Make"">Rebel</td>
+				<td data-title=""Model"">Machine</td>
+				<td data-title=""Year"">1970</td>
+			</tr>
+			...
+		</tbody>
+	</table>
+</div>")</code></pre>
+				</div>
+			</section>
+		</dd>
+	</dl>
+
+</section>
+

@@ -1,0 +1,35 @@
+﻿.mdtf-snackbar {
+	background-color: rgba(50, 50, 50, 1);
+	border-radius: 2px;
+	color: rgba(255, 255, 255, .87);
+	display: flex;
+	font-size: 14px;
+	height: 48px;
+	min-width: 288px;
+	max-width: 568px;
+	padding: 14px 24px;
+	position: relative;
+}
+
+.mdtf-snackbar.small {
+	width: 320px;
+}
+
+.mdtf-snackbar.medium {
+	width: 465px;
+}
+
+.mdtf-snackbar.large {
+	width: 565px;
+}
+	.mdtf-snackbar__message {
+
+	}
+		.mdtf-snackbar.has-action .mdtf-snackbar__message {
+			width: calc(100% - 108px);
+		}
+	.mdtf-snackbar__action {
+		position: absolute;
+		top: 6px;
+		right: 24px;
+	}

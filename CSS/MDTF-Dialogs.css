@@ -1,0 +1,24 @@
+﻿.mdtf-dialog {
+	
+}
+	.mdtf-dialog__content {
+		padding: 24px;
+	}
+		.mdtf-dialog__content--title {
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+		.mdtf-dialog__content--supporting-text {
+			font-size: 14px;
+		}
+			.mdtf-dialog.confirm .mdtf-dialog__content--supporting-text > label{
+				display: block;
+				margin: 20px 0 0;
+			}
+		.mdtf-dialog__actions {
+			height: 52px;
+			padding: 8px;
+			width: 100%;
+		}
+

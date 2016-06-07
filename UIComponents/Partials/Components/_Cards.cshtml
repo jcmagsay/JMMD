@@ -1,0 +1,168 @@
+﻿@using Button = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Button
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Card = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Card
+@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Shadow = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Shadow
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="cards" class="cards-section">
+	<label class="@Typography.Display2">10-4 Material Cards</label>
+	<hr/>
+	<dl>
+		<dt class="@Typography.Headline">Cards</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">A card is a piece of paper with unique related data that serves as an entry point to more detailed information. For example, a card could contain a photo, text, and a link about a single subject.</div>
+			<div class="@Typography.Body1D">There are a list of const strings that are available for use in the MaterialUiConst.cs file. You can use the following directive to access these const strings.<pre><code class="mdi-language-csharp">@Html.Raw("@using Card = TenFour.CommonContent.Web.Utilities.MaterialUiConst.Card")</code></pre></div>
+			
+			<!-- CARD SECTION (CARD 1) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<div class="@Typography.Body2D">Card Skeleton</div>
+					<div class="@Typography.Caption">@Html.Raw("@Card.Base and @Shadow.Dp4")</div>
+					<!-- CARD SKELETON-->
+					<div class="@Card.Base @Shadow.Dp4">
+						<!-- CARD TITLE SECTION -->
+						<!-- Assigns appropriate text characteristics to card title -->
+						<div class="@Card.Title">TITLE</div>
+						<!-- CARD SUBTITLE SECTION -->
+						<!-- Assigns text characteristics to a card subtitle -->
+						<div class="@Card.Subtitle">SUBTITLE</div>
+						<!-- CARD MEDIA SECTION -->
+						<!-- Defines div as a card media container -->
+						<div class="@Card.Media">
+							MEDIA
+							<img src="~/Content/images/Navigation/10-4_logo.jpg"/>
+						</div>
+						<!-- CARD SUPPORTING TEXT SECTION -->
+						<!-- Defines div as a card body text container and assigns appropriate text characteristics to body text -->
+						<div class="@Card.SupportingText">SUPPORTING TEXT</div>
+						<!-- CARD ACTIONS SECTION -->
+						<!-- Defines div as a card actions container and assigns appropriate text characteristics to actions text -->
+						<div class="@Card.Actions">ACTIONS</div>
+						<div class="@Card.Menu">
+							<button class="@Button.FlatIcon">
+								<i class="@Icon.Material">@Icon.Type.MoreVert</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- CARD SKELETON-->
+<div class=""mdl-card mdl-shadow--4dp"">
+	<!-- CARD TITLE SECTION -->
+	<!-- Assigns appropriate text characteristics to card title -->
+	<div class=""mdl-card__title"">TITLE</div>
+	<!-- CARD SUBTITLE SECTION -->
+	<!-- Assigns text characteristics to a card subtitle -->
+	<div class=""mdl-card__subtitle-text"">SUBTITLE</div>
+	<!-- CARD MEDIA SECTION -->
+	<!-- Defines div as a card media container -->
+	<div class=""mdl-card__media"">
+		MEDIA
+		<img src=""~/Content/images/Navigation/10-4_logo.jpg"" />
+	</div>
+	<!-- CARD SUPPORTING TEXT SECTION -->
+	<!-- Defines div as a card body text container and assigns appropriate text characteristics to body text -->
+	<div class=""mdl-card__supporting-text"">SUPPORTING TEXT</div>
+	<!-- CARD ACTIONS SECTION -->
+	<!-- Defines div as a card actions container and assigns appropriate text characteristics to actions text -->
+	<div class=""mdl-card__actions"">ACTIONS</div>
+	<div class=""mdl-card__menu"">
+		<button class=""mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"">
+			<i class=""material-icons"">more_vert</i>
+		</button>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+			<!-- CARD SECTION (CARD 2) -->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Basic Card</div>
+					<div class="@Typography.Caption">@Html.Raw("@Card.Base and @Shadow.Dp2")</div>
+					<!-- BASIC CARD EXAMPLE-->
+					<div class="@Card.Base @Shadow.Dp2">
+						<!-- CARD TITLE SECTION-->
+						<div class="@Card.Title">
+							<h2 class="mdl-card__title-text">Welcome</h2>
+						</div>
+						<!-- CARD SUPPORTING TEXT SECTION -->
+						<div class="@Card.SupportingText">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Mauris sagittis pellentesque lacus eleifend lacinia...
+						</div>
+						<!-- CARD ACTIONS SECTION -->
+						<div class="@Card.Actions mdl-card--border">
+							<a class="@Button.FlatColorPrimaryRipple">Get Started</a>
+						</div>
+						<!-- CARD MENU SECTION -->
+						<div class="@Card.Menu">
+							<button class="@Button.FlatIcon">
+								<i class="@Icon.Material">@Icon.Type.Share</i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="@Grid.Col6">
+					<div class="@Typography.Body2D">Card with const skeleton</div>
+					<div class="@Typography.Caption">@Html.Raw("@Card.Base and @Shadow.Dp2")</div>
+					<!-- BASIC CARD EXAMPLE-->
+					<div class="@Card.Base @Shadow.Dp2">
+						<!-- CARD TITLE SECTION-->
+						<div class="@Card.Title">
+							<h2 class="mdl-card__title-text">@Html.Raw("@Card.Title")</h2>
+						</div>
+						<!-- CARD SUPPORTING TEXT SECTION -->
+						<div class="@Card.SupportingText">@Html.Raw("@Card.SupportingText")</div>
+						<!-- CARD ACTIONS SECTION -->
+						<div class="@Card.Actions mdl-card--border">
+							<div>@Html.Raw("@Card.Actions")</div>
+							<a class="@Button.FlatColorPrimaryRipple">Get Started</a>
+						</div>
+						<!-- CARD MENU SECTION -->
+						<div class="@Card.Menu">
+							@Html.Raw("@Card.Menu")
+							<button class="@Button.FlatIcon">
+								<i class="@Icon.Material">@Icon.Type.Share</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CODE SAMPLE SECTION-->
+			<section class="@Grid.Grid">
+				<div class="@Grid.Col12">
+					<pre><code class="language-markup">@HttpUtility.HtmlDecode(@"<!-- BASIC CARD EXAMPLE-->
+<div class=""mdl-card mdl-shadow--2dp"">
+	<!-- CARD TITLE SECTION-->
+	<div class=""mdl-card__title"">
+		<h2 class=""mdl-card__title-text"">Welcome</h2>
+	</div>
+	<!-- CARD SUPPORTING TEXT SECTION -->
+	<div class=""mdl-card__supporting-text"">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		Mauris sagittis pellentesque lacus eleifend lacinia...
+	</div>
+	<!-- CARD ACTIONS SECTION -->
+	<div class=""mdl-card__actions mdl-card--border"">
+		<a class=""mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"">Get Started</a>
+	</div>
+	<!-- CARD MENU SECTION -->
+	<div class=""mdl-card__menu"">
+		<button class=""mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"">
+			<i class=""material-icons"">share</i>
+		</button>
+	</div>
+</div>")</code></pre>
+				</div>
+			</section>
+
+		</dd>
+	</dl>
+</section>

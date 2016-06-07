@@ -1,0 +1,6 @@
+﻿.mdl-textfield.is-focused label::after {
+	bottom: 15px;
+}
+.mdl-textfield--expandable .mdl-textfield__expandable-holder > label::after {
+	bottom: 2px;
+}

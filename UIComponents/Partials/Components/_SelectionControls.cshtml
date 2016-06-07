@@ -1,0 +1,91 @@
+﻿@using Grid = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.GridLayout
+@using Icon = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Icon
+@using Selection = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Selection
+@using Typography = TenFour.CommonContent.Web.Utilities.UIComponent.MaterialUi.Constants.Typography
+
+<section id="selection-controls" class="selection-controls-section">
+	<label class="@Typography.Display2">10-4 Material Selection Controls</label>
+	<dl>
+		<dt class="@Typography.Headline">Selection Controls</dt>
+		<dd>
+			<div class="@Typography.SubheadingD frame-bottom">Selection controls allow the user to select options. There are three kinds: checkboxes, radio buttons, and on/off switches. Selection controls use the theme’s accent color.</div>
+			<div class="@Grid.Grid">
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Checkbox: Not Checked</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Checkbox")</div>
+					<!-- Checkbox: Not Checked -->
+					<label class="@Selection.Checkbox" for="checkbox-unselected">
+						<input type="checkbox" class="@Selection.CheckboxInput" id="checkbox-unselected"/>
+						<span class="@Selection.CheckboxLabel">Not Selected</span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Checkbox: Checked</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Checkbox")</div>
+					<!-- Checkbox: Checked -->
+					<label class="@Selection.Checkbox" for="checkbox-selected">
+						<input type="checkbox" class="@Selection.CheckboxInput" id="checkbox-selected" checked/>
+						<span class="@Selection.CheckboxLabel">Selected</span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Switch: Not Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Switch")</div>
+					<!-- Switch: Not Active -->
+					<label class="@Selection.Switch" for="switch-unselected">
+						<input type="checkbox" class="@Selection.SwitchInput" id="switch-unselected"/>
+						<span class="@Selection.SwitchLabel">Not Active</span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Switch: Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Switch")</div>
+					<!-- Switch: Active -->
+					<label class="@Selection.Switch" for="switch-selected">
+						<input type="checkbox" class="@Selection.SwitchInput" id="switch-selected" checked/>
+						<span class="@Selection.SwitchLabel">Active</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="@Grid.Grid">
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Radio: Not Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Radio")</div>
+					<!-- Radio: Not Active -->
+					<label class="@Selection.Radio" for="radio-unselected">
+						<input type="radio" class="@Selection.RadioInput" id="radio-unselected" />
+						<span class="@Selection.RadioLabel">Not Selected</span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Radio: Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Radio")</div>
+					<!-- Radio: Active -->
+					<label class="@Selection.Radio" for="radio-selected">
+						<input type="radio" class="@Selection.RadioInput" id="radio-selected" checked />
+						<span class="@Selection.RadioLabel">Selected</span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Icon: Not Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Icon")</div>
+					<!-- Icon: Not Active -->
+					<label class="@Selection.IconToggle" for="switch-unselected">
+						<input type="checkbox" class="@Selection.IconToggleInput" id="icon-unselected" />
+						<span class="@Selection.IconToggleLabel"><i class="@Icon.Material">@Icon.Type.Mood</i></span>
+					</label>
+				</div>
+				<div class="@Grid.Col3">
+					<div class="@Typography.Body2D">Icon: Active</div>
+					<div class="@Typography.Caption">@Html.Raw("@Selection.Icon")</div>
+					<!-- Icon: Active -->
+					<label class="@Selection.IconToggle" for="switch-selected">
+						<input type="checkbox" class="@Selection.IconToggleInput" id="icon-selected" checked />
+						<span class="@Selection.IconToggleLabel"><i class="@Icon.Material">@Icon.Type.Mood</i></span>
+					</label>
+				</div>
+			</div>
+		</dd>
+	</dl>
+</section>
